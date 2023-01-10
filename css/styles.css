@@ -120,6 +120,8 @@
         align-items: center;
 
         gap: 2em;
+
+        margin-bottom: 0.1em;
     }
     .NomadButton {
         background-color: #2c7b9b;
@@ -131,6 +133,14 @@
         width: 7em;
         height: 2.5em;
     }
+    .NomadButton:hover {
+        cursor: pointer;
+
+        background-color: #78cfda;
+        color: #000000;
+
+        transition: 0.25s;
+    }
     .EnterpriseButton {
         background-color: #78cfda;
         color: #000000;
@@ -140,6 +150,13 @@
 
         width: 7em;
         height: 2.5em;
+    }
+    .EnterpriseButton:hover {
+        cursor: pointer;
+        background-color: #2c7b9b;
+        color: #FFFFFF;
+
+        transition: 0.25s;
     }
     .BodyImage-container {
         display: none;
@@ -159,14 +176,30 @@
         align-items: center;
 
         gap: 0.5em;
+
+        background-color: #2c7b9b50;
+        padding: 0.35em;
+
+        border-radius: 1em;
         
     }
     .Offert {
         border-bottom: 1px solid #000000;
         width: 100%;
     }
+    .Offert .OffertInfo:hover {
+        cursor: pointer;
+        color: #FFFFFF;
+        font-weight:normal;
+        font-style: italic;
+
+        transition: 0.3s;
+
+    }
     .Offert .OffertSubInfo {
-        display: none;
+        color: #a09d9d;
+        font-weight:normal;
+        font-style: italic;
     }
     .Offert p {
         display: none;
@@ -461,9 +494,56 @@
         gap: 1em;
     
         padding: 5em;
+
+        background-color: #2c7b9b50;
+
+        border-radius: 0 1em 0 1em;
     }
     .SecondBodyTitle {
         font-size: 1.75rem;
+    }
+    .SecondBodyButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 2em;
+    }
+    .NomadButton {
+        background-color: #2c7b9b;
+        color: #FFFFFF;
+
+        border: none;
+        border-radius: 2px;
+
+        width: 7em;
+        height: 2.5em;
+    }
+    .NomadButton:hover {
+        cursor: pointer;
+
+        background-color: #78cfda;
+        color: #000000;
+
+        transition: 0.25s;
+    }
+    .EnterpriseButton {
+        background-color: #78cfda;
+        color: #000000;
+
+        border: none;
+        border-radius: 2px;
+
+        width: 7em;
+        height: 2.5em;
+    }
+    .EnterpriseButton:hover {
+        cursor: pointer;
+        background-color: #2c7b9b;
+        color: #FFFFFF;
+
+        transition: 0.25s;
     }
     .BodyImage-container {
         display: flex;
@@ -507,11 +587,27 @@
     /* index */
     .Offert {
         width: 30%;
-        margin-top: 2.5em;
+        margin-top: 2em;
+        margin-bottom: 2.5em;
+
+        background-color: #2c7b9b50;
+
+        padding: 0.5em;
+
+        border-radius: 0 1em 0 1em;
     }
     .OffertInfo {
         color: #000000;
         font-size: 1.5rem;
+    }
+    .Offert .OffertInfo:hover {
+        cursor: pointer;
+        color: #FFFFFF;
+        font-weight:normal;
+        font-style: italic;
+
+        transition: 0.3s;
+
     }
     .OffertSubInfo {
         color: #a09d9d;
