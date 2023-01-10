@@ -9,468 +9,7 @@
     font-family: 'Montserrat', sans-serif;
      */
 }
-
-@media screen and (max-width: 768px) {
-    body {
-        background-color: #FFFFFF;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 1em;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    /* header y nav */
-    header {
-        height: 10%;
-        width: 100%;
-        
-        /* position: fixed; */
-    }
-    header p {
-        font-size: 10px;
-    }
-    article {
-        width: 100%;
-    }
-    .Head {
-        width: 100%;
-        height: 1rem;
-        background-color: #2c7b9b;
-    }
-    #Navbar {
-        width: 100%;
-        height: 50px;
-    
-
-        display: grid;
-        grid-template-columns: repeat(3, 30%);
-        justify-content: center;
-        align-items: center;
-
-        border-bottom: 1px solid #272727a2 ;
-        padding: 0 1em;
-        /* position: fixed; */
-        background-color: #FFFFFF;
-    }
-    .item1 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        height: 2em;
-        width: 8em;
-    }
-    #NavLogo{
-        height: 100%;
-        width: 100%;
-    }
-    .MenuIcon {
-        width: 2em;
-        height: 2em;
-
-        grid-column: 4;
-        grid-row: 1/2;
-        
-
-    }
-    .MenuOptions {
-        display: none;
-    }
-    /* index */
-
-    .FirstBody {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 3em;
-
-        margin: 0.5em 0.5em;
-    }
-    .SecondBody {
-        margin: 0.5em;
-    }
-    .SecondBodyInfo{
-        background-image: url("../assets/img/Cabecera-de-la-web-principal.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position:center;
-        
-        display: grid;
-        grid-template-rows: auto;
-
-        gap: 1em;
-    }
-    .SecondBodyButtons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        gap: 2em;
-
-        margin-bottom: 0.1em;
-    }
-    .NomadButton {
-        background-color: #2c7b9b;
-        color: #FFFFFF;
-
-        border: none;
-        border-radius: 2px;
-
-        width: 7em;
-        height: 2.5em;
-    }
-    .NomadButton:hover {
-        cursor: pointer;
-
-        background-color: #78cfda;
-        color: #000000;
-
-        transition: 0.25s;
-    }
-    .EnterpriseButton {
-        background-color: #78cfda;
-        color: #000000;
-
-        border: none;
-        border-radius: 2px;
-
-        width: 7em;
-        height: 2.5em;
-    }
-    .EnterpriseButton:hover {
-        cursor: pointer;
-        background-color: #2c7b9b;
-        color: #FFFFFF;
-
-        transition: 0.25s;
-    }
-    .BodyImage-container {
-        display: none;
-    }
-    .ThirdBody {
-        margin: 0.5em;
-
-    }
-    .ThirdBodyTitle {
-        text-align: center;
-        padding-bottom: 0.3em;
-    }
-    .ThirdBodyInfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 0.5em;
-
-        background-color: #2c7b9b50;
-        padding: 0.35em;
-
-        border-radius: 1em;
-        
-    }
-    .Offert {
-        border-bottom: 1px solid #000000;
-        width: 100%;
-    }
-    .Offert .OffertInfo:hover {
-        cursor: pointer;
-        color: #FFFFFF;
-        font-weight:normal;
-        font-style: italic;
-
-        transition: 0.3s;
-
-    }
-    .Offert .OffertSubInfo {
-        color: #a09d9d;
-        font-weight:normal;
-        font-style: italic;
-    }
-    .Offert p {
-        display: none;
-    }
-    .FooterBody {
-        width: 100%;
-        height: 3em;
-    
-        background-color: #000000;
-        color:#a09d9d;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-    }  
-}
-@media screen and (max-width: 320px) {
-    body {
-        background-color: #FFFFFF;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 1em;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    /* header y nav */
-    header {
-        height: 10%;
-        width: 100%;
-        
-        /* position: fixed; */
-    }
-    header p {
-        font-size: 10px;
-    }
-    article {
-        width: 100%;
-    }
-    .Head {
-        width: 100%;
-        height: 1rem;
-        background-color: #2c7b9b;
-        display: none;
-    }
-    #Navbar {
-        width: 100%;
-        height: 50px;
-    
-        display: grid;
-        grid-template-columns: repeat(3, 30%);
-
-        border-bottom: 1px solid #272727a2 ;
-        padding: 0 1em;
-        background-color: #2c7b9b;
-    }
-    .item1 {
-        grid-column: 2;
-        grid-row: 1/2;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        width: 6em;
-        height: 2em;
-    }
-    #NavLogo{
-        height: 100%;
-        width: 100%;
-    }
-    .MenuIcon {
-        width: 2em;
-        height: 2em;
-    }
-    .MenuOptions {
-        display: none;
-    }
-    .textoaubicar {
-        font-size: 1em;
-        text-align: justify;
-    }
-    /* index */
-    .FirstBody {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 3em;
-
-        margin: 0.5em 0.5em;
-    }
-    .SecondBody {
-        margin: 0.5em;  
-    }
-    /* Se usa para difrerenciar los fondos de las imagenes para los responsive */
-    .SbIndex{
-        background-image: url("../assets/img/Cabecera-de-la-web-principal.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position:center;
-        
-        display: grid;
-        grid-template-rows: auto;
-
-        gap: 1em;
-    }
-    .SecondBodyButtons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        gap: 2em;
-    }
-    .NomadButton {
-        background-color: #2c7b9b;
-        color: #FFFFFF;
-
-        border: none;
-        border-radius: 2px;
-
-        width: 7em;
-        height: 2.5em;
-    }
-    .EnterpriseButton {
-        background-color: #78cfda;
-        color: #000000;
-
-        border: none;
-        border-radius: 2px;
-
-        width: 7em;
-        height: 2.5em;
-    }
-    .BodyImage-container .Index {
-        display: none;
-    }
-    .ThirdBody {
-        margin: 0.5em;
-
-    }
-    .ThirdBodyTitle {
-        text-align: center;
-        padding-bottom: 0.3em;
-    }
-    .ThirdBodyInfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 0.5em;
-        
-    }
-    .Offert {
-        border-bottom: 1px solid #000000;
-        width: 100%;
-    }
-    .Offert .OffertSubInfo {
-        display: none;
-    }
-    .Offert p {
-        display: none;
-    }
-    .FooterBody {
-        width: 100%;
-        height: 3em;
-    
-        background-color: #000000;
-        color:#a09d9d;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-    }
-    /* Acerca de */
-    .SbAcercaDe {
-        background-image: url("../assets/img/Logo-de-Joshua-Herrera-Group-HD.png");
-        background-repeat: no-repeat;
-        background-size: 10em;
-        background-position:center;
-        
-        display: grid;
-        grid-template-rows: auto;
-
-        gap: 1em;
-    }
-    .BiAcercaDe {
-        display: none;
-    }
-    .Culture-Container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1em;
-        
-            width: 100%;
-        
-            background-color:#ccd7dbab ;
-        
-            padding: 1em;
-        
-            border: none;
-            border-radius: 1em;
-    }
-    .AboutIcon {
-            width: 2em;
-            height: 2em;
-    }
-    .Charac-Container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        
-            gap: 1em;
-        
-            margin-top: 1em;
-            margin-bottom: 1em;
-    }
-    .Charac-Img {
-            width: 100%;
-            height: 100%;
-    }
-    .Charac-Detail{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        
-            width: 100%;
-            gap: 1.5em;
-    }
-    .About-Icon-Container {
-            display:flex;
-            flex-direction: column;
-            justify-content:space-evenly;
-            align-items: center;
-        
-            gap: 3em;
-        
-            width: 100%;
-
-            margin-bottom: 1em;
-        
-    }
-    .About-Icon-Container div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-@media screen and (min-width:768px) {
-    
+@media screen and (min-width:769px) {
     body {
         background-color: #FFFFFF;
     }
@@ -541,6 +80,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    
+        width: 100%;
+        
         
     }
     .FirstBodyTitle{
@@ -575,10 +117,10 @@
     
         gap: 1em;
     
-        padding: 5em;
-
+        padding: 3em;
+    
         background-color: #2c7b9b50;
-
+    
         border-radius: 0 1em 0 1em;
     }
     .SecondBodyTitle {
@@ -589,34 +131,34 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
+    
         gap: 2em;
     }
     .NomadButton {
         background-color: #2c7b9b;
         color: #FFFFFF;
-
+    
         border: none;
         border-radius: 2px;
-
+    
         width: 7em;
         height: 2.5em;
     }
     .NomadButton:hover {
         cursor: pointer;
-
+    
         background-color: #78cfda;
         color: #000000;
-
+    
         transition: 0.25s;
     }
     .EnterpriseButton {
         background-color: #78cfda;
         color: #000000;
-
+    
         border: none;
         border-radius: 2px;
-
+    
         width: 7em;
         height: 2.5em;
     }
@@ -624,7 +166,7 @@
         cursor: pointer;
         background-color: #2c7b9b;
         color: #FFFFFF;
-
+    
         transition: 0.25s;
     }
     .BodyImage-container {
@@ -643,9 +185,8 @@
         width: 100%;
     }
     .BodyImageLogo {
-        width: 40rem;
+        width: 100%;
         height: 20%;
-    
     }
     .ThirdBody {
         display: flex;
@@ -671,11 +212,11 @@
         width: 30%;
         margin-top: 2em;
         margin-bottom: 2.5em;
-
+    
         background-color: #2c7b9b50;
-
+    
         padding: 0.5em;
-
+    
         border-radius: 0 1em 0 1em;
     }
     .OffertInfo {
@@ -687,9 +228,9 @@
         color: #FFFFFF;
         font-weight:normal;
         font-style: italic;
-
+    
         transition: 0.3s;
-
+    
     }
     .OffertSubInfo {
         color: #a09d9d;
@@ -741,8 +282,8 @@
         margin-bottom: 10em;
     }
     .Charac-Img {
-        width: 17em;
-        height: 17em;
+        width: 15em;
+        height: 15em;
     }
     .Charac-Detail{
         display: flex;
@@ -750,7 +291,7 @@
         justify-content: center;
         align-items: center;
     
-        width: 30em;
+        width: 25em;
         gap: 1.5em;
     }
     .About-Icon-Container {
@@ -765,7 +306,7 @@
     
         margin: 2.5em 0 2.5em 0;
     
-        padding: 1.5em 0 1.5em 0;
+        padding: 1.5em 0 1.5em 1em;
     }
     
     /* Como Funciona*/
@@ -1032,4 +573,556 @@
         font-weight: bold;
         text-align: justify;
     } 
+    
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #FFFFFF;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        gap: 1em;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    /* header y nav */
+    header {
+        height: 10%;
+        width: 100%;
+        
+        /* position: fixed; */
+    }
+    header p {
+        font-size: 10px;
+    }
+    article {
+        width: 100%;
+    }
+    .Head {
+        width: 100%;
+        height: 1rem;
+        background-color: #2c7b9b;
+    }
+    #Navbar {
+        width: 100%;
+        height: 50px;
+    
+
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: center;
+        align-items: center;
+
+        border-bottom: 1px solid #272727a2 ;
+        padding: 0 1em;
+        /* position: fixed; */
+        background-color: #FFFFFF;
+    }
+    .item1 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        height: 2em;
+        width: 8em;
+    }
+    #NavLogo{
+        height: 100%;
+        width: 100%;
+    }
+    .MenuIcon {
+        width: 2em;
+        height: 2em;
+
+        grid-column: 4;
+        grid-row: 1/2;
+        
+
+    }
+    .MenuOptions {
+        display: none;
+    }
+    .textoaubicar {
+        font-size: 1em;
+        text-align: justify;
+    }
+    /* index */
+    
+    .FirstBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 3em;
+
+        margin: 0.5em 0.5em;
+    }
+    .SecondBody {
+        margin: 0.5em;
+    }
+    .SecondBodyInfo{
+        background-image: url("../assets/img/Cabecera-de-la-web-principal.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        
+        display: grid;
+        grid-template-rows: auto;
+
+        gap: 1em;
+    }
+    .SecondBodyButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 2em;
+
+        margin-bottom: 0.1em;
+    }
+    .NomadButton {
+        background-color: #2c7b9b;
+        color: #FFFFFF;
+
+        border: none;
+        border-radius: 2px;
+
+        width: 7em;
+        height: 2.5em;
+    }
+    .NomadButton:hover {
+        cursor: pointer;
+
+        background-color: #78cfda;
+        color: #000000;
+
+        transition: 0.25s;
+    }
+    .EnterpriseButton {
+        background-color: #78cfda;
+        color: #000000;
+
+        border: none;
+        border-radius: 2px;
+
+        width: 7em;
+        height: 2.5em;
+    }
+    .EnterpriseButton:hover {
+        cursor: pointer;
+        background-color: #2c7b9b;
+        color: #FFFFFF;
+
+        transition: 0.25s;
+    }
+    .BodyImage-container {
+        display: none;
+    }
+    .ThirdBody {
+        margin: 0.5em;
+
+    }
+    .ThirdBodyTitle {
+        text-align: center;
+        padding-bottom: 0.3em;
+    }
+    .ThirdBodyInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.5em;
+
+        background-color: #2c7b9b50;
+        padding: 0.35em;
+
+        border-radius: 1em;
+        
+    }
+    .Offert {
+        border-bottom: 1px solid #000000;
+        width: 100%;
+    }
+    .Offert .OffertInfo:hover {
+        cursor: pointer;
+        color: #FFFFFF;
+        font-weight:normal;
+        font-style: italic;
+
+        transition: 0.3s;
+
+    }
+    .Offert .OffertSubInfo {
+        color: #a09d9d;
+        font-weight:normal;
+        font-style: italic;
+    }
+    .Offert p {
+        display: none;
+    }
+    .FooterBody {
+        width: 100%;
+        height: 3em;
+    
+        background-color: #000000;
+        color:#a09d9d;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+    }  
+    /* Acerca de */
+    .SbAcercaDe {
+        background-image: url("../assets/img/Logo-de-Joshua-Herrera-Group-HD.png");
+        background-repeat: no-repeat;
+        background-size: 16em;
+        background-position:center;    
+        
+        display: grid;
+        grid-template-rows: auto;
+
+        gap: 1em;
+
+        width: 100%;
+    }
+    .BiAcercaDe {
+        display: none;
+    }
+    .Culture-Container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+            
+        width: 100%;
+            
+        background-color:#ccd7dbab ;
+            
+        padding: 1em;
+            
+        border: none;
+        border-radius: 1em;
+
+    }
+    .AboutIcon {
+        width: 3.5em;
+        height: 3.5em;
+    }
+    .Charac-Container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            
+        gap: 1em;
+            
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .Charac-Img {
+        width: 60%;
+        height: 60%;
+    }
+    .Charac-Detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            
+        width: 100%;
+        gap: 1.5em;
+
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .About-Icon-Container {
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+            
+        gap: 3em;
+            
+        width: 100%;
+    
+        margin-bottom: 1em;
+            
+    }
+    .About-Icon-Container div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 320px) {
+    body {
+        background-color: #FFFFFF;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        gap: 1em;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    /* header y nav */
+    header {
+        height: 10%;
+        width: 100%;
+        
+        /* position: fixed; */
+    }
+    header p {
+        font-size: 10px;
+    }
+    article {
+        width: 100%;
+    }
+    .Head {
+        width: 100%;
+        height: 1rem;
+        background-color: #2c7b9b;
+        display: none;
+    }
+    #Navbar {
+        width: 100%;
+        height: 50px;
+    
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+
+        border-bottom: 1px solid #272727a2 ;
+        padding: 0 1em;
+        background-color: #2c7b9b;
+    }
+    .item1 {
+        grid-column: 2;
+        grid-row: 1/2;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 6em;
+        height: 2em;
+    }
+    #NavLogo{
+        height: 100%;
+        width: 100%;
+    }
+    .MenuIcon {
+        width: 2em;
+        height: 2em;
+    }
+    .MenuOptions {
+        display: none;
+    }
+    .textoaubicar {
+        font-size: 1em;
+        text-align: justify;
+    }
+    /* index */
+    .FirstBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 3em;
+
+        margin: 0.5em 0.5em;
+    }
+    .SecondBody {
+        margin: 0.5em;  
+    }
+    /* Se usa para difrerenciar los fondos de las imagenes para los responsive */
+    .SbIndex{
+        background-image: url("../assets/img/Cabecera-de-la-web-principal.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        
+        display: grid;
+        grid-template-rows: auto;
+
+        gap: 1em;
+    }
+    .SecondBodyButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 2em;
+    }
+    .NomadButton {
+        background-color: #2c7b9b;
+        color: #FFFFFF;
+
+        border: none;
+        border-radius: 2px;
+
+        width: 7em;
+        height: 2.5em;
+    }
+    .EnterpriseButton {
+        background-color: #78cfda;
+        color: #000000;
+
+        border: none;
+        border-radius: 2px;
+
+        width: 7em;
+        height: 2.5em;
+    }
+    .BodyImage-container .Index {
+        display: none;
+    }
+    .ThirdBody {
+        margin: 0.5em;
+
+    }
+    .ThirdBodyTitle {
+        text-align: center;
+        padding-bottom: 0.3em;
+    }
+    .ThirdBodyInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.5em;
+        
+    }
+    .Offert {
+        border-bottom: 1px solid #000000;
+        width: 100%;
+    }
+    .Offert .OffertSubInfo {
+        display: none;
+    }
+    .Offert p {
+        display: none;
+    }
+    .FooterBody {
+        width: 100%;
+        height: 3em;
+    
+        background-color: #000000;
+        color:#a09d9d;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+    }
+    /* Acerca de */
+    .SbAcercaDe {
+        background-image: url("../assets/img/Logo-de-Joshua-Herrera-Group-HD.png");
+        background-repeat: no-repeat;
+        background-size: 10em;
+        background-position:center;
+        
+        display: grid;
+        grid-template-rows: auto;
+
+        gap: 1em;
+
+        width: 100%;
+    }
+    .BiAcercaDe {
+        display: none;
+    }
+    .Culture-Container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+        
+            width: 100%;
+        
+            background-color:#ccd7dbab ;
+        
+            padding: 1em;
+        
+            border: none;
+            border-radius: 1em;
+    }
+    .AboutIcon {
+            width: 2em;
+            height: 2em;
+    }
+    .Charac-Container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            gap: 1em;
+        
+            margin-top: 1em;
+            margin-bottom: 1em;
+    }
+    .Charac-Img {
+            width: 100%;
+            height: 100%;
+    }
+    .Charac-Detail{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            width: 100%;
+            gap: 1.5em;
+    }
+    .About-Icon-Container {
+            display:flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            align-items: center;
+        
+            gap: 3em;
+        
+            width: 100%;
+
+            margin-bottom: 1em;
+        
+    }
+    .About-Icon-Container div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+    
