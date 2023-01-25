@@ -1,0 +1,279 @@
+@media screen and (max-width: 768px) {
+    body {
+        background-color: $white;
+    }
+
+
+    header {
+        width: 100%;
+        height: 100%;
+        
+        .Head {
+            width: 100%;
+            height: 1.5rem;
+            @include flex(row, center, center);
+
+            background-color: $blue;
+
+            p {
+                @include textos(center, 0.75em);
+            }
+        }
+
+        #Navbar {
+            // width: 100%;
+            // height: 50px;
+
+            // display: grid;
+            // grid-template-columns: repeat(3, 30%);
+            // justify-content: center;
+            // align-items: center;
+            // border-bottom: 1px solid #272727a2;
+
+            // background-color: $white;
+            padding: 0 2em;
+            a {
+                width: 8em;
+                height: 3em;
+                text-decoration: none;
+
+                #NavLogo {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .MenuOptions {
+                display: none;
+            }
+
+            .MenuOptionsResp {
+                display: none;
+            }
+
+            input {
+                &:checked ~ .MenuOptionsResp {
+                        display: block;
+                }
+                display: none;
+            }
+
+            label {
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                box-sizing: border-box;
+                border: 1px solid $black;
+                line-height: 30px;
+                font-weight: bold;
+                text-align: center;
+                user-select: none;
+
+                &:hover {
+                    background-color: $grey;
+                }
+            }
+
+            input {
+                &:checked ~ label {
+                    background-color: $bg-boxes;
+                }
+            }
+
+            .MenuOptionsResp {
+                width: 200px;
+                margin-top: 100px;
+                padding: 0;
+            }
+
+            li {
+                display: block;
+                background-color: $bg-boxes;
+                margin: 0;
+                padding: 10px;
+                list-style: none;
+                border-bottom: 1px solid $grey;
+
+                &:hover {
+                    filter: brightness(110%);
+                }
+            }
+        }
+    }
+    
+    
+    main {
+        @include flex(column, center, center);
+        gap: 1em;
+    }
+
+    .FirstBody {
+        width: 100%;
+        @include flex(column, center, center);
+
+        margin: 0.5em;
+        gap: 3em;
+
+        .SecondBody {
+            margin: 0.5em;
+
+            .SbIndex {
+                width: 100%;
+                background-image: url("../assets/img/Cabecera-de-la-web-principal.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 16em;
+
+                padding: 2em;
+                gap: 1em;
+
+                h1 {
+                    @include titles(1.25rem)
+                }
+            }
+
+            .BodyImage-container {
+                display: none;
+            }
+        }
+
+        article {
+            width: 100%;
+
+            .ThirdBody {
+                margin: 1em;
+
+                .ThirdBodyTitle {
+                    @include titles(1.5rem)
+                }
+
+                .ThirdBodyInfo {
+                    width: 100%;
+                    @include flex(column, center, center); 
+                    
+                    padding: 0 1em;
+                    border-radius: 1em;
+                    gap: 0.5em;
+
+                    background-color: $bg-secondboxes;
+                }
+            }
+        }
+    }
+
+    .Offert {
+        width: 100%;
+
+        margin: 0.75em 0;
+        padding: 1em 0.5em;
+        border-bottom: 1px solid #272727a2;
+
+        .OffertInfo {
+            @include titles(1.25rem)
+        }
+
+        .OffertSubInfo {
+            @include titles(1rem);
+            font-style: italic;
+            color: $grey;
+        }
+
+        .textoaubicar {
+            display: none;
+        }
+    }
+
+
+.SbAcercaDe {
+    width: 100%;
+    background-image: url("../assets/img/Logo-de-Joshua-Herrera-Group-HD.png");
+    background-repeat: no-repeat;
+    background-size: 16em;
+    background-position: center;
+
+    padding: 2em;
+    gap: 1em;
+
+    h1 {
+        @include titles(1.25rem)
+    }
+}
+
+.Culture-Container {
+    width: 90%;
+
+    padding: 1em;
+    gap: 1em;
+    border: none; 
+    border-radius: $borderbg;
+
+    background-color: $bg-secondboxes;
+
+    .SecondBodyTitle {
+        @include titles(1.25rem)
+    }
+}
+
+.AboutUs {
+    width: 100%;
+
+    margin: 1em 0;
+    .Charac-Container {
+
+        @include flex(column, center, center);
+        
+        margin: 3em 0;
+        gap: 1em;
+
+        .Charac-Img {
+            width: 60%;
+            height: 60%;
+        }
+
+        .Charac-Detail {
+            width: 100%;
+            
+            margin: 0 1em;
+            padding: 1.5em;
+
+
+        }
+    }
+}
+
+.About-Icon-Container {
+    @include flex(column, space-evenly, center);
+    
+    margin: 0;
+    padding: 1.5em 0 1.5em 0;
+
+    div {
+        padding: 1em;
+
+        .AboutIcon {
+            width: 3.5em;
+            height: 3.5em;
+        }
+    }
+}
+
+
+
+
+    .FooterBody {
+        width: 100%;
+        height: 100%;
+
+        @include flex(column, center, center);
+        
+        color: $grey;
+        background-color: $black;
+        p {
+
+            text-align: center;
+
+            display: block;
+            align-self: center;
+        }
+    }
+}

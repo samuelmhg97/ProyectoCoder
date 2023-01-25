@@ -1,1128 +1,746 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,400;1,500&display=swap');
-/* global */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,400;1,500&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    /* 
-    font-family: 'Montserrat', sans-serif;
-     */
-}
-@media screen and (min-width:769px) {
-    body {
-        background-color: #FFFFFF;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 1em;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    header {
-        height: 20%;
-        width: 100%;
-    
-        /* position: fixed; */
-    }
-    article {
-        width: 100%;
-    }
-    
-    .Head {
-        width: 100%;
-        height: 3rem;
-        background-color: #2c7b9b;
-    }
-    #Navbar {
-        width: 100%;
-        height: 100px;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #272727a2 ;
-    
-        padding: 0 5em 0 5em;
-    
-        /* position: fixed; */
-    
-        background-color: #FFFFFF;
-    }
-    #NavLogo{
-        height: 50px;
-        widows: 80px;
-    }
-    .MenuIcon {
-        display: none;
-    }
-    .MenuOptions {
-        width: 50%;
-        text-decoration: none;
-        list-style-type:none;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        color: black;
-    
-    }
-    .FirstBody {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        width: 100%;
-        
-        
-    }
-    .FirstBodyTitle{
-        font-size: 2rem
-    }
-    .textoaubicar {
-        text-align: justify;
-        font-size: 0.9em;
-    }
-    
-    .SecondBody {
-        width: 100%;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 3em;
-    
-        padding: 0 1em 0 1em;
-    }
-    .SecondBodyInfo {
-        width: 50%;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        text-align: justify;
-    
-        gap: 1em;
-    
-        padding: 3em;
-    
-        background-color: #2c7b9b50;
-    
-        border-radius: 0 1em 0 1em;
-    }
-    .SecondBodyTitle {
-        font-size: 1.75rem;
-    }
-    .SecondBodyButtons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 2em;
-    }
-    .NomadButton {
-        background-color: #2c7b9b;
-        color: #FFFFFF;
-    
-        border: none;
-        border-radius: 2px;
-    
-        width: 7em;
-        height: 2.5em;
-    }
-    .NomadButton:hover {
-        cursor: pointer;
-    
-        background-color: #78cfda;
-        color: #000000;
-    
-        transition: 0.25s;
-    }
-    .EnterpriseButton {
-        background-color: #78cfda;
-        color: #000000;
-    
-        border: none;
-        border-radius: 2px;
-    
-        width: 7em;
-        height: 2.5em;
-    }
-    .EnterpriseButton:hover {
-        cursor: pointer;
-        background-color: #2c7b9b;
-        color: #FFFFFF;
-    
-        transition: 0.25s;
-    }
-    .BodyImage-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    
-        width: 35rem;
-        height: 35rem;
-    
-        margin-right: 1em;
-    }
-    .BodyImage{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif; }
+
+header {
+  height: 20%;
+  width: 100%; }
+
+.slide-in-top {
+  -webkit-animation: slide-in-top 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: slide-in-top 1s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+.Head {
+  width: 100%;
+  height: 3rem;
+  background-color: #2c7b9b; }
+  .Head p {
+    font-size: 1em; }
+
+#Navbar {
+  width: 100%;
+  height: 6rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #272727a2;
+  padding: 0 5em; }
+  #Navbar a {
+    color: #000000;
+    text-decoration: none; }
+    #Navbar a #NavLogo {
+      height: 3.125rem;
+      width: 13.75rem; }
+  #Navbar .MenuIcon {
+    display: none; }
+  #Navbar .MenuOptions {
+    width: 50%;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+    color: #000000;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Montserrat", sans-serif; }
+    #Navbar .MenuOptions li a {
+      color: #000000;
+      font-weight: normal; }
+      #Navbar .MenuOptions li a:hover {
+        color: #2c7b9b;
+        font-weight: bold;
+        transition: 0.3s; }
+  #Navbar #menu {
+    display: none; }
+  #Navbar .MenuOptionsResp {
+    display: none; }
+  #Navbar label {
+    display: none; }
+
+body {
+  background-color: #FFFFFF; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em; }
+
+.FirstBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .FirstBody .SecondBody {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 0 1em; }
+    .FirstBody .SecondBody .BodyImage-container {
+      width: 35rem;
+      height: 35rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 1em; }
+      .FirstBody .SecondBody .BodyImage-container .BodyImage {
         height: 100%;
-        width: 100%;
-    }
-    .BodyImageLogo {
-        width: 100%;
-        height: 20%;
-    }
-    .ThirdBody {
+        width: 100%; }
+  .FirstBody article {
+    width: 100%; }
+    .FirstBody article .ThirdBody {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem; }
+      .FirstBody article .ThirdBody .ThirdBodyTitle {
+        font-size: 1.5rem; }
+      .FirstBody article .ThirdBody .ThirdBodyInfo {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 4rem;
-    }
-    .ThirdBodyTitle {
-        font-size: 1.5rem;
-    }
-    .ThirdBodyInfo {
-        display: flex;
-        flex-direction: row;
         flex-flow: wrap;
         justify-content: center;
-    
-        gap: 2em;
-    }
-    /* index */
-    .Offert {
-        width: 30%;
-        margin-top: 2em;
-        margin-bottom: 2.5em;
-    
-        background-color: #2c7b9b50;
-    
-        padding: 0.5em;
-    
-        border-radius: 0 1em 0 1em;
-    }
-    .OffertInfo {
-        color: #000000;
-        font-size: 1.5rem;
-    }
-    .Offert .OffertInfo:hover {
+        gap: 2em; }
+
+.SecondBodyInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 3em;
+  border-radius: 0 1em;
+  background-color: #2c7b9b50;
+  text-align: justify; }
+  .SecondBodyInfo h1 {
+    font-size: 1.5rem;
+    text-align: center; }
+  .SecondBodyInfo .textoaubicar {
+    text-align: justify;
+    font-size: 0.9em; }
+  .SecondBodyInfo .SecondBodyButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em; }
+    .SecondBodyInfo .SecondBodyButtons .NomadButton {
+      width: 7em;
+      height: 2.5em;
+      background-color: #2c7b9b;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 2px; }
+      .SecondBodyInfo .SecondBodyButtons .NomadButton:hover {
         cursor: pointer;
-        color: #FFFFFF;
-        font-weight:normal;
-        font-style: italic;
-    
-        transition: 0.3s;
-    
-    }
-    .OffertSubInfo {
-        color: #a09d9d;
-        font-size: 1rem;
-    }
-    
-    .FooterBody{
-        width: 100%;
-        height: 3em;
-    
-        background-color: #000000;
-        color:#a09d9d;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    /* Acerca de */
-    .Culture-Container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-        width: 70%;
-    
-        background-color:#ccd7dbab ;
-    
-        padding: 3em;
-    
-        border: none;
-        border-radius: 9999999em;
-    }
-    .AboutIcon {
-        width: 5em;
-        height: 5em;
-    }
-    .Charac-Container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 3em;
-    
-        margin-top: 10em;
-        margin-bottom: 10em;
-    }
-    .Charac-Img {
-        width: 15em;
-        height: 15em;
-    }
-    .Charac-Detail{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        width: 25em;
-        gap: 1.5em;
-    }
-    .About-Icon-Container {
-        display:flex;
-        flex-direction: row;
-        justify-content:space-evenly;
-        align-items: center;
-    
-        gap: 3em;
-    
-        width: 100%;
-    
-        margin: 2.5em 0 2.5em 0;
-    
-        padding: 1.5em 0 1.5em 1em;
-    }
-    
-    /* Como Funciona*/
-    .SecondBodyHIW {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        gap: 1em;
-    
-        margin: 1em;
-    }
-    
-    .HIW-Container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-    
-        gap: 2em;
-    
-        margin: 2em;
-    }
-    .HIW-ItemContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-        gap: 1em;
-    
-        width: 30rem;
-        height: 30rem;
-    
-        border-radius: 0em 1.5em 0em 1.5em;
-    
-        background-color: #a09d9d50;
-        padding: 0.7em;
-    }
-    
-    .HIW-ItemImage {
+        background-color: #78cfda;
+        color: #000000;
+        transition: 0.25s; }
+    .SecondBodyInfo .SecondBodyButtons .EnterpriseButton {
+      width: 7em;
+      height: 2.5em;
+      background-color: #78cfda;
+      color: #000000;
+      border: none;
+      border-radius: 2px; }
+      .SecondBodyInfo .SecondBodyButtons .EnterpriseButton:hover {
+        cursor: pointer;
         background-color: #2c7b9b;
-        padding: 0.5em;
-    
-        border-radius: 1em;
-    
-        width: 50%;
-        height: 50%;
-    }
-    
-    .HIW-Container2 {
-        width: 100%;
-        height: 15em;
-    
-        display: flex;
-        flex-direction: column;
-    
-        background-image: url(https://joshuaherreragroup.com/wp-content/uploads/2017/04/slider2.jpg);
-        background-size: cover;
-    
-        margin: 1em 0;
-    }
-    .HIW-ItemContainer2 {
-        width: 30%;
-        height: 100%;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-        margin: 1.5em 1em;
-    
-        padding: 1em;
-    
-        background-color: #a09d9d95;
-        
-    }
-    
-    /* Contacto */
-    
-    .Contact-BodyContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 2em;
-    
-        margin: 2em;
-    }
-    .Contact-InfoContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        background-color: #2c7b9b50;
-    
-        border-radius: 10em;
-    }
-    .Contact-InfoItem {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 1.5em;
-    
-        margin: 3em;
-    }
-    
-    .Contact-InfoItem div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-        gap: 1em;
-    }
-    .Contact-InfoImage {
-        width: 3em;
-        height: 3em;
-    }
-    .Contact-FormContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        background-color: #a09d9d50;
-    
-        border-radius: 10em;
-    }
-    .Contact-FormItem {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 1.5em;
-    
-        margin: 3em;
-    }
-    .ContactFormField {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-    
-        gap: 0.5em;
-        width: 100%;
-    
-        border: none;
-    
-        padding: 0em 2em;
-        
-    }
-    .Contact-FormContainer form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-        margin:0 3em;
-    
-        padding: 0 0 3em 0;
-    }
-    .Contact-FormContainer form legend {
-        margin: 1em;
-    }
-    .Contact-FormContainer form .Inputs {
-        height: 2em;
-        width: 15em;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .Contact-FormContainer form .Inputs input {
-        height: 2em;
-    }
-    .Contact-FormContainer form input {
-        border: none;
-    }
-    .Contact-FormContainer form div {
-        height: 2em;
-        width: 100%;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .Comment{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    
-        width: 50em;
-    
-        gap: 2em;
-    }
-    
-    .Comment input {
-        height: 25em;
-        width: 30em;
-    }
-    
-    /* Blog */
-    .ContactTitle {
-        margin: 1em;
-    }
-    .Blog-Container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-    }
-    .Blog-ArticleContainer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    
-        /* width: 100%; */
-        gap: 1em;
-    
-        margin: 1em;
-    }
-    .Blog-ArticleContainer figure{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        width: 30%;
-        gap: 0.3em;
-    
-        margin: 1em;
-        
-        background-color:#2c7b9b50;
-        
-    }
-    .Blog-ArticleContainer figure img {
-        width: 100%;
-    
-        border-radius: 1.5em;
-        padding: 1em;
-    }
-    
-    .Blog-ArticleContainer figure p {
-        padding: 1em;
-    } 
-    .Blog-ArticleContainer figure figcaption {
-        padding: 1em;
-    
-        font-weight: bold;
+        color: #FFFFFF;
+        transition: 0.25s; }
+
+.Offert {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 2.5em 0;
+  padding: 2em 0.5em;
+  gap: 0.75em;
+  border-radius: 0 1em;
+  background-color: #2c7b9b50; }
+  .Offert .OffertInfo {
+    color: #000000;
+    font-size: 1.5rem;
+    text-align: center; }
+    .Offert .OffertInfo:hover {
+      cursor: pointer;
+      color: #FFFFFF;
+      text-align: center;
+      font-style: italic;
+      transition: 0.3s; }
+  .Offert .OffertSubInfo {
+    color: #a09d9d;
+    font-size: 1rem;
+    text-align: center; }
+  .Offert .textoaubicar {
+    text-align: justify;
+    font-size: 0.9em; }
+
+.BodyImageLogo {
+  width: 100%;
+  height: 20%; }
+
+.Culture-Container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  border: none;
+  border-radius: 999999em;
+  background-color: #ccd7dbab; }
+  .Culture-Container .SecondBodyTitle {
+    font-size: 1.75rem; }
+  .Culture-Container .textoaubicar {
+    text-align: justify;
+    font-size: 0.9em; }
+
+.AboutUs {
+  width: 100%; }
+  .AboutUs .Charac-Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10em 0;
+    gap: 3em; }
+    .AboutUs .Charac-Container .Charac-Img {
+      width: 15em;
+      height: 15em;
+      border-radius: 10px; }
+    .AboutUs .Charac-Container .Charac-Detail {
+      width: 25em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 1em;
+      background-color: #2c7b9b50;
+      padding: 3em;
+      gap: 1.5em; }
+      .AboutUs .Charac-Container .Charac-Detail .ThirdBodyTitle {
+        font-size: 1.5rem; }
+      .AboutUs .Charac-Container .Charac-Detail .textoaubicar {
         text-align: justify;
-    } 
-    
-}
+        font-size: 0.9em; }
+
+.About-Icon-Container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2.5em 0;
+  padding: 1.5em 1em 1.5em 1em;
+  gap: 1.5em; }
+  .About-Icon-Container div {
+    border-radius: 2em;
+    background-color: #ccd7dbab;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 0.5em; }
+    .About-Icon-Container div:hover {
+      cursor: pointer;
+      background-color: #2c7b9b50;
+      transition: 0.3s; }
+    .About-Icon-Container div .AboutIcon {
+      width: 4em;
+      height: 4em; }
+    .About-Icon-Container div h5 {
+      text-align: center; }
+
+.SecondBodyHIW {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  gap: 1em; }
+  .SecondBodyHIW .FirstBodyTitle {
+    font-size: 2rem; }
+  .SecondBodyHIW .textoaubicar {
+    text-align: justify;
+    font-size: 0.9em; }
+
+.HIW-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2em;
+  gap: 2em; }
+  .HIW-Container .HIW-ItemContainer {
+    width: 25em;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 1em;
+    background-color: #2c7b9b50;
+    padding: 3em;
+    gap: 1em; }
+    .HIW-Container .HIW-ItemContainer .HIW-ItemImage {
+      width: 55%;
+      height: 55%;
+      border-radius: 10px;
+      background-color: #ccd7dbab; }
+    .HIW-Container .HIW-ItemContainer .ThirdBodyTitle {
+      font-size: 1.2rem;
+      text-align: center; }
+    .HIW-Container .HIW-ItemContainer .textoaubicar {
+      text-align: justify;
+      font-size: 0.9em; }
+
+.HIW-Container2 {
+  width: 100%;
+  height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1em 0;
+  background-image: url("	https://joshuaherreragroup.com/wp-content/uploads/2017/04/slider2.jpg");
+  background-size: cover; }
+  .HIW-Container2 .HIW-ItemContainer2 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 1em;
+    padding: 1em;
+    border-radius: 10px;
+    gap: 0.5em;
+    background-color: #a09d9d60; }
+    .HIW-Container2 .HIW-ItemContainer2 h2 {
+      font-size: 1.3rem;
+      text-align: center; }
+    .HIW-Container2 .HIW-ItemContainer2 .textoaubicar {
+      text-align: justify;
+      font-size: 0.9em; }
+    .HIW-Container2 .HIW-ItemContainer2 .NomadButton {
+      width: 7em;
+      height: 2.5em;
+      background-color: #2c7b9b;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 2px; }
+      .HIW-Container2 .HIW-ItemContainer2 .NomadButton:hover {
+        cursor: pointer;
+        background-color: #78cfda;
+        color: #000000;
+        transition: 0.25s; }
+
+.Contact-BodyContainer {
+  width: 80%;
+  height: 40rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  gap: 5em; }
+  .Contact-BodyContainer .Contact-InfoContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c7b9b50;
+    border-radius: 0 1em;
+    padding: 1em;
+    gap: 1em; }
+    .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0.75em;
+      gap: 1.5em; }
+      .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem .Contact-InfoImage {
+        width: 3em;
+        height: 3em; }
+      .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em; }
+        .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem div .ThirdBodyTitle {
+          font-size: 1.2rem;
+          text-align: center; }
+        .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem div .textoaubicar {
+          text-align: center;
+          font-size: 0.9em; }
+  .Contact-BodyContainer .Contact-FormContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 1em;
+    background-color: #ccd7dbab; }
+    .Contact-BodyContainer .Contact-FormContainer .Contact-FormItem {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2em;
+      gap: 1.5em; }
+      .Contact-BodyContainer .Contact-FormContainer .Contact-FormItem .ThirdBodyTitle {
+        font-size: 1.2rem; }
+      .Contact-BodyContainer .Contact-FormContainer .Contact-FormItem .textoaubicar {
+        text-align: justify;
+        font-size: 0.9em; }
+    .Contact-BodyContainer .Contact-FormContainer form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em; }
+      .Contact-BodyContainer .Contact-FormContainer form .ContactFormField {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 2em;
+        gap: 0.5em;
+        border: none; }
+        .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Inputs {
+          width: 15em;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 1em; }
+          .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Inputs span {
+            font-size: 1em; }
+          .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Inputs input {
+            height: 2em;
+            width: 10em;
+            border: none;
+            text-align: center; }
+            .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Inputs input::placeholder {
+              font-size: 0.8em; }
+        .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Comment {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 0.5em; }
+          .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Comment span {
+            font-size: 1em; }
+          .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Comment input {
+            height: 15em;
+            width: 20em;
+            align-self: center;
+            border: none; }
+
+.Blog-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .Blog-Container .Blog-ArticleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+    margin-bottom: 10em;
+    gap: 1em; }
+    .Blog-Container .Blog-ArticleContainer figure {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 1em;
+      background-color: #2c7b9b50;
+      padding: 3em;
+      margin: 1em;
+      gap: 0.3em;
+      background-color: #2c7b9b50;
+      padding: 1em;
+      border-radius: 0 1em; }
+      .Blog-Container .Blog-ArticleContainer figure img {
+        width: 100%;
+        border-radius: 10px; }
+      .Blog-Container .Blog-ArticleContainer figure figcaption {
+        font-size: 1rem;
+        padding: 1em;
+        text-align: center;
+        font-weight: bold; }
+      .Blog-Container .Blog-ArticleContainer figure .textoaubicar {
+        text-align: justify;
+        font-size: 0.9em; }
+
+footer {
+  width: 100%;
+  height: 10vh; }
+
+.FooterBody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #a09d9d; }
 
 @media screen and (max-width: 768px) {
-    body {
-        background-color: #FFFFFF;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 1em;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    /* header y nav */
-    header {
-        height: 10%;
-        width: 100%;
-        
-        /* position: fixed; */
-    }
-    header p {
-        font-size: 10px;
-    }
-    article {
-        width: 100%;
-    }
-    .Head {
-        width: 100%;
-        height: 1rem;
-        background-color: #2c7b9b;
-    }
-    #Navbar {
-        width: 100%;
-        height: 50px;
-    
-
-        display: grid;
-        grid-template-columns: repeat(3, 30%);
-        justify-content: center;
-        align-items: center;
-
-        border-bottom: 1px solid #272727a2 ;
-        padding: 0 1em;
-        /* position: fixed; */
-        background-color: #FFFFFF;
-    }
-    .item1 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        height: 2em;
+  body {
+    background-color: #FFFFFF; }
+  header {
+    width: 100%;
+    height: 100%; }
+    header .Head {
+      width: 100%;
+      height: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: #2c7b9b; }
+      header .Head p {
+        text-align: center;
+        font-size: 0.75em; }
+    header #Navbar {
+      padding: 0 2em; }
+      header #Navbar a {
         width: 8em;
-    }
-    #NavLogo{
-        height: 100%;
-        width: 100%;
-    }
-    .MenuIcon {
-        width: 2em;
-        height: 2em;
-
-        grid-column: 4;
-        grid-row: 1/2;
-        
-
-    }
-    .MenuOptions {
-        display: none;
-    }
-    .textoaubicar {
-        font-size: 1em;
-        text-align: justify;
-    }
-    /* index */
-    
-    .FirstBody {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 3em;
-
-        margin: 0.5em 0.5em;
-    }
-    .SecondBody {
-        margin: 0.5em;
-    }
-    .SecondBodyInfo{
-        background-image: url("../assets/img/Cabecera-de-la-web-principal.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position:center;
-        
-        display: grid;
-        grid-template-rows: auto;
-
-        gap: 1em;
-    }
-    .SecondBodyButtons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        gap: 2em;
-
-        margin-bottom: 0.1em;
-    }
-    .NomadButton {
-        background-color: #2c7b9b;
-        color: #FFFFFF;
-
-        border: none;
-        border-radius: 2px;
-
-        width: 7em;
-        height: 2.5em;
-    }
-    .NomadButton:hover {
-        cursor: pointer;
-
-        background-color: #78cfda;
-        color: #000000;
-
-        transition: 0.25s;
-    }
-    .EnterpriseButton {
-        background-color: #78cfda;
-        color: #000000;
-
-        border: none;
-        border-radius: 2px;
-
-        width: 7em;
-        height: 2.5em;
-    }
-    .EnterpriseButton:hover {
-        cursor: pointer;
-        background-color: #2c7b9b;
-        color: #FFFFFF;
-
-        transition: 0.25s;
-    }
-    .BodyImage-container {
-        display: none;
-    }
-    .ThirdBody {
-        margin: 0.5em;
-
-    }
-    .ThirdBodyTitle {
+        height: 3em;
+        text-decoration: none; }
+        header #Navbar a #NavLogo {
+          height: 100%;
+          width: 100%; }
+      header #Navbar .MenuOptions {
+        display: none; }
+      header #Navbar .MenuOptionsResp {
+        display: none; }
+      header #Navbar input {
+        display: none; }
+        header #Navbar input:checked ~ .MenuOptionsResp {
+          display: block; }
+      header #Navbar label {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        box-sizing: border-box;
+        border: 1px solid #000000;
+        line-height: 30px;
+        font-weight: bold;
         text-align: center;
-        padding-bottom: 0.3em;
-    }
-    .ThirdBodyInfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 0.5em;
-
+        user-select: none; }
+        header #Navbar label:hover {
+          background-color: #a09d9d; }
+      header #Navbar input:checked ~ label {
+        background-color: #2c7b9b50; }
+      header #Navbar .MenuOptionsResp {
+        width: 200px;
+        margin-top: 100px;
+        padding: 0; }
+      header #Navbar li {
+        display: block;
         background-color: #2c7b9b50;
-        padding: 0.35em;
-
-        border-radius: 1em;
-        
-    }
-    .Offert {
-        border-bottom: 1px solid #000000;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 1px solid #a09d9d; }
+        header #Navbar li:hover {
+          filter: brightness(110%); }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em; }
+  .FirstBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    gap: 3em; }
+    .FirstBody .SecondBody {
+      margin: 0.5em; }
+      .FirstBody .SecondBody .SbIndex {
         width: 100%;
-    }
-    .Offert .OffertInfo:hover {
-        cursor: pointer;
-        color: #FFFFFF;
-        font-weight:normal;
-        font-style: italic;
-
-        transition: 0.3s;
-
-    }
-    .Offert .OffertSubInfo {
-        color: #a09d9d;
-        font-weight:normal;
-        font-style: italic;
-    }
-    .Offert p {
-        display: none;
-    }
-    .FooterBody {
-        width: 100%;
-        height: 3em;
-    
-        background-color: #000000;
-        color:#a09d9d;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-    }  
-    /* Acerca de */
-    .SbAcercaDe {
-        background-image: url("../assets/img/Logo-de-Joshua-Herrera-Group-HD.png");
-        background-repeat: no-repeat;
-        background-size: 16em;
-        background-position:center;    
-        
-        display: grid;
-        grid-template-rows: auto;
-
-        gap: 1em;
-
-        width: 100%;
-    }
-    .BiAcercaDe {
-        display: none;
-    }
-    .Culture-Container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-            
-        width: 100%;
-            
-        background-color:#ccd7dbab ;
-            
-        padding: 1em;
-            
-        border: none;
-        border-radius: 1em;
-
-    }
-    .AboutIcon {
-        width: 3.5em;
-        height: 3.5em;
-    }
-    .Charac-Container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-            
-        gap: 1em;
-            
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-    .Charac-Img {
-        width: 60%;
-        height: 60%;
-    }
-    .Charac-Detail{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-            
-        width: 100%;
-        gap: 1.5em;
-
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-    .About-Icon-Container {
-        display:flex;
-        flex-direction: column;
-        justify-content:space-evenly;
-        align-items: center;
-            
-        gap: 3em;
-            
-        width: 100%;
-    
-        margin-bottom: 1em;
-            
-    }
-    .About-Icon-Container div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-@media screen and (max-width: 320px) {
-    body {
-        background-color: #FFFFFF;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-        gap: 1em;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    /* header y nav */
-    header {
-        height: 10%;
-        width: 100%;
-        
-        /* position: fixed; */
-    }
-    header p {
-        font-size: 10px;
-    }
-    article {
-        width: 100%;
-    }
-    .Head {
-        width: 100%;
-        height: 1rem;
-        background-color: #2c7b9b;
-        display: none;
-    }
-    #Navbar {
-        width: 100%;
-        height: 50px;
-    
-        display: grid;
-        grid-template-columns: repeat(3, 30%);
-
-        border-bottom: 1px solid #272727a2 ;
-        padding: 0 1em;
-        background-color: #2c7b9b;
-    }
-    .item1 {
-        grid-column: 2;
-        grid-row: 1/2;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        width: 6em;
-        height: 2em;
-    }
-    #NavLogo{
-        height: 100%;
-        width: 100%;
-    }
-    .MenuIcon {
-        width: 2em;
-        height: 2em;
-    }
-    .MenuOptions {
-        display: none;
-    }
-    .textoaubicar {
-        font-size: 1em;
-        text-align: justify;
-    }
-    /* index */
-    .FirstBody {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 3em;
-
-        margin: 0.5em 0.5em;
-    }
-    .SecondBody {
-        margin: 0.5em;  
-    }
-    /* Se usa para difrerenciar los fondos de las imagenes para los responsive */
-    .SbIndex{
         background-image: url("../assets/img/Cabecera-de-la-web-principal.png");
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position:center;
-        
-        display: grid;
-        grid-template-rows: auto;
-
-        gap: 1em;
-    }
-    .SecondBodyButtons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        gap: 2em;
-    }
-    .NomadButton {
-        background-color: #2c7b9b;
-        color: #FFFFFF;
-
-        border: none;
-        border-radius: 2px;
-
-        width: 7em;
-        height: 2.5em;
-    }
-    .EnterpriseButton {
-        background-color: #78cfda;
-        color: #000000;
-
-        border: none;
-        border-radius: 2px;
-
-        width: 7em;
-        height: 2.5em;
-    }
-    .BodyImage-container .Index {
-        display: none;
-    }
-    .ThirdBody {
-        margin: 0.5em;
-
-    }
-    .ThirdBodyTitle {
-        text-align: center;
-        padding-bottom: 0.3em;
-    }
-    .ThirdBodyInfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 0.5em;
-        
-    }
-    .Offert {
-        border-bottom: 1px solid #000000;
-        width: 100%;
-    }
+        background-position: center;
+        background-size: 16em;
+        padding: 2em;
+        gap: 1em; }
+        .FirstBody .SecondBody .SbIndex h1 {
+          font-size: 1.25rem; }
+      .FirstBody .SecondBody .BodyImage-container {
+        display: none; }
+    .FirstBody article {
+      width: 100%; }
+      .FirstBody article .ThirdBody {
+        margin: 1em; }
+        .FirstBody article .ThirdBody .ThirdBodyTitle {
+          font-size: 1.5rem; }
+        .FirstBody article .ThirdBody .ThirdBodyInfo {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 1em;
+          border-radius: 1em;
+          gap: 0.5em;
+          background-color: #ccd7dbab; }
+  .Offert {
+    width: 100%;
+    margin: 0.75em 0;
+    padding: 1em 0.5em;
+    border-bottom: 1px solid #272727a2; }
+    .Offert .OffertInfo {
+      font-size: 1.25rem; }
     .Offert .OffertSubInfo {
-        display: none;
-    }
-    .Offert p {
-        display: none;
-    }
-    .FooterBody {
+      font-size: 1rem;
+      font-style: italic;
+      color: #a09d9d; }
+    .Offert .textoaubicar {
+      display: none; }
+  .SbAcercaDe {
+    width: 100%;
+    background-image: url("../assets/img/Logo-de-Joshua-Herrera-Group-HD.png");
+    background-repeat: no-repeat;
+    background-size: 16em;
+    background-position: center;
+    padding: 2em;
+    gap: 1em; }
+    .SbAcercaDe h1 {
+      font-size: 1.25rem; }
+  .Culture-Container {
+    width: 90%;
+    padding: 1em;
+    gap: 1em;
+    border: none;
+    border-radius: 0 1em;
+    background-color: #ccd7dbab; }
+    .Culture-Container .SecondBodyTitle {
+      font-size: 1.25rem; }
+  .AboutUs {
+    width: 100%;
+    margin: 1em 0; }
+    .AboutUs .Charac-Container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 3em 0;
+      gap: 1em; }
+      .AboutUs .Charac-Container .Charac-Img {
+        width: 60%;
+        height: 60%; }
+      .AboutUs .Charac-Container .Charac-Detail {
         width: 100%;
-        height: 3em;
-    
-        background-color: #000000;
-        color:#a09d9d;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-    }
-    /* Acerca de */
-    .SbAcercaDe {
-        background-image: url("../assets/img/Logo-de-Joshua-Herrera-Group-HD.png");
-        background-repeat: no-repeat;
-        background-size: 10em;
-        background-position:center;
-        
-        display: grid;
-        grid-template-rows: auto;
-
-        gap: 1em;
-
-        width: 100%;
-    }
-    .BiAcercaDe {
-        display: none;
-    }
-    .Culture-Container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1em;
-        
-            width: 100%;
-        
-            background-color:#ccd7dbab ;
-        
-            padding: 1em;
-        
-            border: none;
-            border-radius: 1em;
-    }
-    .AboutIcon {
-            width: 2em;
-            height: 2em;
-    }
-    .Charac-Container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        
-            gap: 1em;
-        
-            margin-top: 1em;
-            margin-bottom: 1em;
-    }
-    .Charac-Img {
-            width: 100%;
-            height: 100%;
-    }
-    .Charac-Detail{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        
-            width: 100%;
-            gap: 1.5em;
-    }
-    .About-Icon-Container {
-            display:flex;
-            flex-direction: column;
-            justify-content:space-evenly;
-            align-items: center;
-        
-            gap: 3em;
-        
-            width: 100%;
-
-            margin-bottom: 1em;
-        
-    }
+        margin: 0 1em;
+        padding: 1.5em; }
+  .About-Icon-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 1.5em 0 1.5em 0; }
     .About-Icon-Container div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-    
+      padding: 1em; }
+      .About-Icon-Container div .AboutIcon {
+        width: 3.5em;
+        height: 3.5em; }
+  .FooterBody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a09d9d;
+    background-color: #000000; }
+    .FooterBody p {
+      text-align: center;
+      display: block;
+      align-self: center; } }
+
+@media screen and (max-width: 320px) {
+  body {
+    background-color: #FFFFFF; }
+  header {
+    height: 60%; }
+    header .Head {
+      display: none; }
+    header #Navbar {
+      background-color: #2c7b9b;
+      padding: 0 2em; }
+  .FirstBody article .ThirdBody {
+    gap: 2em; }
+    .FirstBody article .ThirdBody .ThirdBodyTitle {
+      font-size: 1.25rem; }
+    .FirstBody article .ThirdBody .ThirdBodyInfo .Offert .OffertInfo {
+      font-size: 1rem; }
+    .FirstBody article .ThirdBody .ThirdBodyInfo .Offert .OffertSubInfo {
+      display: none; }
+  .AboutUs .Charac-Container {
+    margin: 1em; }
+    .AboutUs .Charac-Container .Charac-Img {
+      width: 100%;
+      height: 100%; }
+  .FooterBody p {
+    padding: 1em; } }

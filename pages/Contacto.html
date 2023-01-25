@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="slide-in-top">
         <div class="Head">
             <p>Hola como estas bienvenido a este humilde proyectito</p>
         </div>
         <nav id="Navbar">
-            <a href="../index.html">
+            <a href="../index.html" class="item1">
                 <img id="NavLogo" src="../assets/img/Logo-de-Joshua-Herrera-Group-HD.png" alt="Logo de Navegacion">
             </a>
-            <ul class ="MenuOptions">
+            <ul class ="MenuOptions item3">
                 <li >
                     <a href="./AcercaDe.html">Acerca De</a>
                 </li>
@@ -30,22 +30,29 @@
                     <a href="./Blog.html">Blog</a>
                 </li>
             </ul>
-            <!-- enlaces internos que sirven para one pages -->
-            <a href="#textoaubicar"></a>
-            <!-- <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol> -->
-            <!-- <dl> -->
-                <!-- listas de definicion -->
-                <!-- <dt>papa</dt>
-                <dd>Un alimento</dd> -->
-            <!-- </dl> -->
+            <input type="checkbox" id="menu">
+            <label for="menu">☰</label>
+            <ul class="MenuOptionsResp">
+                <li >
+                    <a href="./AcercaDe.html">Acerca De</a>
+                </li>
+                <li>
+                    <a href="./ComoFunciona.html">Como Funciona</a>
+                </li>
+                <li>
+                    <a href="./Contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="./Blog.html">Blog</a>
+                </li>
+            </ul>
         </nav>
+        <!-- <nav class="Head-responsive">
+
+        </nav> -->
     </header>
     <main>
-        <section>
+        <section class="FirstBody">
             <div>
                 <h1>Contacto</h1>
             </div>
@@ -55,28 +62,32 @@
                         <img class="Contact-InfoImage" src="https://cdn-icons-png.flaticon.com/512/854/854952.png" alt="Ubicación">
                         <div>
                             <h3 class="ThirdBodyTitle">Ubicación</h3>
-                            <p class="textoaubicar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quidem ipsam obcaecati, iste inventore dolor vel itaque atque ipsum nihil alias hic dolorem consequatur doloremque in culpa a facilis. Facere!</p>
+                            <p class="textoaubicar">Córdoba Capital, Argentina</p>
                         </div>
                     </div>
                     <div class="Contact-InfoItem">
                         <img class="Contact-InfoImage" src="https://cdn-icons-png.flaticon.com/512/1000/1000889.png" alt="Contacto">
                         <div>
                             <h3 class="ThirdBodyTitle">Número de Contacto</h3>
-                            <p class="textoaubicar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatibus, blanditiis corrupti, aliquid a corporis fugiat sequi maiores nesciunt officia maxime consequuntur earum? Animi aperiam modi quis corporis minima! Fuga!</p>
+                            <p class="textoaubicar">
+                                (+54) 351 613 4979 
+                                <br>
+                                (+54) 351 305 6378
+                                </p>
                         </div>
                     </div>
                     <div class="Contact-InfoItem">
                         <img class="Contact-InfoImage" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
                         <div>
                             <h3 class="ThirdBodyTitle">Email</h3>
-                            <p class="textoaubicar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, deleniti beatae atque aperiam neque soluta laudantium vero exercitationem similique sit repudiandae earum alias ratione et dolorum voluptate vel est ipsam!</p>
+                            <p class="textoaubicar">samuelmhg97@gmail.com</p>
                         </div>
                     </div>
                 </div>
                 <div class="Contact-FormContainer">
                     <div class="Contact-FormItem">
                         <h3 class="ThirdBodyTitle">¿Hablamos?</h3>
-                        <p class="textoaubicar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, reprehenderit provident modi ex asperiores voluptatem praesentium iste molestiae qui, temporibus fugit ut quae atque. Obcaecati reiciendis vero sequi velit dignissimos.</p>
+                        <p class="textoaubicar">Estaremos atentos a tu contacto</p>
                     </div>
                     <form action="" method="post">
                         <!-- action es para base de datos
@@ -85,16 +96,14 @@
                         -->
                         <fieldset class="ContactFormField">
                             <!-- <legend>datos</legend> -->
-                            <div>
-                                <label class="Inputs" for="nombre">
-                                    <span>Nombre:</span>
-                                    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
-                                </label>
-                                <label class="Inputs" for="Apellido">
-                                    <span>Apellido:</span>
-                                    <input type="text" id="Apellido" placeholder="Ingresa tu Apellidos">
-                                </label>
-                            </div>
+                            <label class="Inputs" for="nombre">
+                                <span>Nombre:</span>
+                                <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+                            </label>
+                            <label class="Inputs" for="Apellido">
+                                <span>Apellido:</span>
+                                <input type="text" id="Apellido" placeholder="Ingresa tu Apellidos">
+                            </label>
                             <label class="Inputs" for="Email">
                                 <span>Email:</span>
                                 <input type="email" id="Email" placeholder="Ingresa tu email" required>

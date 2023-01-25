@@ -1,0 +1,125 @@
+.Contact-BodyContainer {
+    width: 80%;
+    height: 40rem;
+    @include flex(row, center, center);
+    margin: 2em;
+    gap: 5em;
+
+    .Contact-InfoContainer {
+        width: 50%;
+        @include flex(column, center, center);
+        background-color: $bg-boxes;
+        border-radius: $borderbg;
+        padding: 1em;
+
+        gap: 1em;
+
+        .Contact-InfoItem {
+            @include flex(row, center, center);
+
+            margin: 0.75em;
+            gap: 1.5em;
+
+            .Contact-InfoImage {
+                width: 3em;
+                height: 3em;
+            }
+
+            div {
+                @include flex(column, center, center);
+
+                gap: 1em;
+
+                .ThirdBodyTitle {
+                    @include titles(1.2rem);
+                    text-align: center;
+                }
+
+                .textoaubicar {
+                    @include textos(center, 0.9em);
+                }
+            }
+        }
+    }
+
+    .Contact-FormContainer {
+        width: 50%;
+        @include flex(column, center, center);
+
+        border-radius: $borderbg;
+        background-color: $bg-secondboxes;
+
+        .Contact-FormItem {
+            width: 100%;
+            @include flex(column, center, center);
+
+            padding: 2em;
+            gap: 1.5em;
+
+            .ThirdBodyTitle {
+                @include titles(1.2rem)
+            }
+
+            .textoaubicar {
+                @include textos(justify, 0.9em)
+            }
+        }
+
+        form {
+            width: 100%;
+            @include flex(column, center, center);
+
+            padding: 1em;
+            
+            .ContactFormField {
+                width: 100%;
+                @include flex(column, center, flex-start);
+
+                padding: 0 2em;
+                gap: 0.5em;
+                border: none;
+
+                .Inputs {
+                    width: 15em;
+                    height: 100%;
+                    @include flex(row, space-between, center);
+
+                    gap: 1em;
+
+                    span {
+                        font-size: 1em;
+                    }
+
+                    input {
+                        height: 2em;
+                        width: 10em;
+                        border: none;
+
+                        text-align: center;
+
+                        &::placeholder {
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+
+                .Comment {
+                    width: 100%;
+                    @include flex(column, center, flex-start);
+                    gap:0.5em;
+
+                    span {
+                        font-size: 1em;
+                    }
+
+                    input {
+                        height: 15em;
+                        width: 20em;
+                        align-self: center;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

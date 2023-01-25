@@ -1,0 +1,88 @@
+.BodyImageLogo {
+    width: 100%;
+    height: 20%;
+}
+
+
+.Culture-Container {
+    width: 70%;
+    @include flex(column, center, center);
+
+    padding: 3em;
+    
+    border: none;
+    border-radius: 999999em;
+
+    background-color: $bg-secondboxes;
+
+    .SecondBodyTitle {
+        @include titles(1.75rem)
+    }
+
+    .textoaubicar  {
+        @include textos(justify, 0.9em)
+    }
+}
+
+.AboutUs {
+    width: 100%;
+    .Charac-Container {
+        @include flex(row, center, center);
+
+        margin: 10em 0;
+        gap: 3em;
+
+        .Charac-Img {
+            width: 15em;
+            height: 15em;
+
+            border-radius: 10px;
+        }
+
+        .Charac-Detail {
+            width: 25em;
+            @include flex(column, center, center);
+            @include bg-greyboxes;
+
+            gap:1.5em;
+
+            .ThirdBodyTitle {
+                @include titles(1.5rem);
+            }
+            .textoaubicar {
+                @include textos(justify, 0.9em);
+            }
+        }
+    }
+}
+
+.About-Icon-Container {
+    width: 100%;
+    @include flex(row, space-evenly, center);
+
+    margin: 2.5em 0;
+    padding: 1.5em 1em 1.5em 1em;
+    gap: 1.5em;
+
+    div {
+        @include bg-pinkboxes;
+        @include flex(column, center, center);
+        padding: 1em;
+        gap: 0.5em;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $bg-boxes;
+            transition: 0.3s;
+        }
+
+        .AboutIcon {
+            width: 4em;
+            height: 4em;
+        }
+
+        h5 {
+            text-align: center;
+        }
+    }
+}

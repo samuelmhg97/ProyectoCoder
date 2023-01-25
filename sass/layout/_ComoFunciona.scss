@@ -1,0 +1,101 @@
+.SecondBodyHIW {
+    @include flex(column, center, center);
+
+    margin: 1em;
+    gap: 1em;
+    .FirstBodyTitle {
+        @include titles(2rem);
+    }
+
+    .textoaubicar {
+        @include textos(justify, 0.9em)
+    }
+}
+
+.HIW-Container {
+    @include flex(row, space-evenly, center);
+    flex-wrap: wrap;
+
+    margin: 2em;
+    gap: 2em;
+
+    .HIW-ItemContainer {
+        width: 25em;
+        height: 25em;
+        @include flex(column, center, center);
+        
+        @include bg-greyboxes;
+        gap: 1em;
+
+        .HIW-ItemImage {
+            width: 55%;
+            height: 55%;
+
+            border-radius: 10px;
+            background-color: $bg-secondboxes;
+        }
+
+        .ThirdBodyTitle {
+            @include titles(1.2rem);
+            text-align: center;
+        }
+        .textoaubicar {
+            @include textos(justify, 0.9em)
+        }
+    }
+}
+
+.HIW-Container2 {
+    width: 100%;
+    height: 15em;
+    @include flex(column, center, flex-start);
+
+    margin: 1em 0;
+
+    background-image: url("	https://joshuaherreragroup.com/wp-content/uploads/2017/04/slider2.jpg");
+    background-size: cover;
+
+    // background-color: $black;
+
+    .HIW-ItemContainer2 {
+        width: 30%;
+        height: 100%;
+
+        @include flex(column, center, center);
+
+        margin: 1.5em 1em;
+        padding: 1em;
+        border-radius: 10px;
+        gap:0.5em;
+
+        background-color: #a09d9d60;
+
+        h2 {
+            @include titles(1.3rem);
+            text-align: center;
+        }
+
+        .textoaubicar {
+            @include textos(justify, 0.9em)
+        }
+        .NomadButton {
+            width: 7em;
+            height: 2.5em;
+
+            background-color: $blue;
+            color: $white;
+
+            border: none;
+            border-radius: 2px;
+
+            &:hover {
+                cursor: pointer;
+
+                background-color: $sweetblue;
+                color: $black;
+
+                transition: 0.25s;
+            }
+        }
+    }
+}

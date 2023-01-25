@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca De || Joshua Herrera Group</title>
+    <title>Blog || Joshua Herrera Group</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="slide-in-top">
         <div class="Head">
             <p>Hola como estas bienvenido a este humilde proyectito</p>
         </div>
         <nav id="Navbar">
-            <a href="../index.html">
+            <a href="../index.html" class="item1">
                 <img id="NavLogo" src="../assets/img/Logo-de-Joshua-Herrera-Group-HD.png" alt="Logo de Navegacion">
             </a>
-            <ul class ="MenuOptions">
+            <ul class ="MenuOptions item3">
                 <li >
                     <a href="./AcercaDe.html">Acerca De</a>
                 </li>
@@ -30,22 +30,29 @@
                     <a href="./Blog.html">Blog</a>
                 </li>
             </ul>
-            <!-- enlaces internos que sirven para one pages -->
-            <a href="#textoaubicar"></a>
-            <!-- <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol> -->
-            <!-- <dl> -->
-                <!-- listas de definicion -->
-                <!-- <dt>papa</dt>
-                <dd>Un alimento</dd> -->
-            <!-- </dl> -->
+            <input type="checkbox" id="menu">
+            <label for="menu">☰</label>
+            <ul class="MenuOptionsResp">
+                <li >
+                    <a href="./AcercaDe.html">Acerca De</a>
+                </li>
+                <li>
+                    <a href="./ComoFunciona.html">Como Funciona</a>
+                </li>
+                <li>
+                    <a href="./Contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="./Blog.html">Blog</a>
+                </li>
+            </ul>
         </nav>
+        <!-- <nav class="Head-responsive">
+
+        </nav> -->
     </header>
     <main>
-        <section>
+        <section class="FirstBody">
             <h1 class="FirstBodyTitle ContactTitle">Articulos Relevantes</h1>    
             <article class="Blog-Container">
                 <div class="Blog-ArticleContainer">

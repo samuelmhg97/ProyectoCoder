@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Joshua Herrera Group</title>
     <!-- este link icon es el logo muy importante memorizar -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="slide-in-top">
         <div class="Head">
             <p>Hola como estas bienvenido a este humilde proyectito</p>
         </div>
@@ -21,7 +21,6 @@
             <a href="./index.html" class="item1">
                 <img id="NavLogo" src="./assets/img/Logo-de-Joshua-Herrera-Group-HD.png" alt="Logo de Navegacion">
             </a>
-            <img class="MenuIcon item2" src="https://cdn-icons-png.flaticon.com/512/561/561184.png" alt="Buerger Menu">
             <ul class ="MenuOptions item3">
                 <li >
                     <a href="./pages/AcercaDe.html">Acerca De</a>
@@ -36,6 +35,25 @@
                     <a href="./pages/Blog.html">Blog</a>
                 </li>
             </ul>
+            <input type="checkbox" id="menu">
+            <label for="menu">☰</label>
+            <ul class="MenuOptionsResp">
+                <li >
+                    <a href="./pages/AcercaDe.html">Acerca De</a>
+                </li>
+                <li>
+                    <a href="./pages/ComoFunciona.html">Como Funciona</a>
+                </li>
+                <li>
+                    <a href="./pages/Contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="./pages/Blog.html">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="Head-responsive">
+
         </nav>
     </header>
     <main>
@@ -60,32 +78,32 @@
                         <div class="Offert">
                             <h3 class="OffertInfo">Formación Online</h3>
                             <h4 class="OffertSubInfo">Pensaba en nuevas tendencias</h4>
-                            <p class="textoaubicar+">Cursos online, retos y contenido exclusivo para tu formación como profesional ante las tendencias del mercado actual.</p>
+                            <p class="textoaubicar">Cursos online, retos y contenido exclusivo para tu formación como profesional ante las tendencias del mercado actual.</p>
                         </div>
                         <div class="Offert">
                             <h3 class="OffertInfo">Oportunidades Laborales</h3>
                             <h4 class="OffertSubInfo">Enfocado en las necesidades actuales</h4>
-                            <p class="textoaubicar+">Conecta con proyectos que estén necesitando profesionales por medio de nuestra bolsa laboral.</p>
+                            <p class="textoaubicar">Conecta con proyectos que estén necesitando profesionales por medio de nuestra bolsa laboral.</p>
                         </div>
                         <div class="Offert">
                             <h3 class="OffertInfo">Eventos Exclusivos</h3>
                                 <h4 class="OffertSubInfo">Para los miembros de nuestra comunidad</h4>
-                            <p class="textoaubicar+">Accede a nuestros eventos con profesionales y mentores especializados en el sector digital.</p>
+                            <p class="textoaubicar">Accede a nuestros eventos con profesionales y mentores especializados en el sector digital.</p>
                         </div>
                         <div class="Offert">
                             <h3 class="OffertInfo">Comunidad Digital</h3>
                                 <h4 class="OffertSubInfo">Un espacio para conectar con otros</h4>
-                            <p class="textoaubicar+">Conecta con otros mediante nuestra comunidad y genera nuevas oportunidades de desarrollo.</p>
+                            <p class="textoaubicar">Conecta con otros mediante nuestra comunidad y genera nuevas oportunidades de desarrollo.</p>
                         </div>
                         <div class="Offert">
                             <h3 class="OffertInfo">Oportunidades De Carrera</h3>
                                 <h4 class="OffertSubInfo">Obtén tu primera oportunidad laboral</h4>
-                            <p class="textoaubicar+">Forma parte de nuestro plan de carreras y obtén tu primera oportunidad laboral dentro de nuestro ecosistema.</p>
+                            <p class="textoaubicar">Forma parte de nuestro plan de carreras y obtén tu primera oportunidad laboral dentro de nuestro ecosistema.</p>
                         </div>
                         <div class="Offert">
                             <h3 class="OffertInfo">Beneficios Exclusivos</h3>
                             <h4 class="OffertSubInfo">Para negocios y profesionales</h4>
-                            <p class="textoaubicar+">Generamos acuerdos con diferentes organizaciones que traigan algún beneficio para la comunidad.</p>
+                            <p class="textoaubicar">Generamos acuerdos con diferentes organizaciones que traigan algún beneficio para la comunidad.</p>
                         </div>
                     </div>
                 </div>
@@ -94,7 +112,7 @@
     </main>
     <footer>
         <div class="FooterBody">
-           <p>Samuel Herrera Todos los derechos reservados</p> 
+            <p>Samuel Herrera Todos los derechos reservados</p> 
         </div>
     </footer>
 </body>

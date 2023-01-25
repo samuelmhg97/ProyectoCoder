@@ -1,0 +1,163 @@
+body {
+    background-color: $white;
+}
+
+main {
+    @include flex(column, center, center);
+    gap: 1em;
+}
+.FirstBody {
+    width: 100%;
+    @include flex(column, center, center);
+
+    .SecondBody {
+        width: 100%;
+        @include flex(row, center, center);
+
+        gap:3em;
+        padding: 0 1em;
+
+        
+        .BodyImage-container {
+            width: 35rem;
+            height: 35rem;
+            @include flex(row, center, center);
+
+            margin: 0 1em;
+
+            .BodyImage {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    article {
+        width: 100%;
+        .ThirdBody {
+            @include flex(column, center, center);
+
+            gap: 4rem;
+
+            .ThirdBodyTitle {
+                @include titles(1.5rem);
+            }
+
+            .ThirdBodyInfo {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: center;
+
+                gap: 2em;
+
+            }
+        }
+    }
+}
+
+
+.SecondBodyInfo {
+    width: 50%;
+    @include flex(column, center, center);
+
+    gap:1em; 
+    padding: 3em;
+    border-radius: 0 1em;
+
+    background-color: $bg-boxes;
+
+    text-align: justify;
+
+    h1 {
+        @include titles(1.5rem);
+        text-align: center;
+    }
+    .textoaubicar {
+        @include textos(justify, 0.9em);
+    }
+
+    .SecondBodyButtons {
+        @include flex(row, center, center);
+        gap: 2em;
+
+        .NomadButton {
+            width: 7em;
+            height: 2.5em;
+
+            background-color: $blue;
+            color: $white;
+
+            border: none;
+            border-radius: 2px;
+
+            &:hover {
+                cursor: pointer;
+
+                background-color: $sweetblue;
+                color: $black;
+
+                transition: 0.25s;
+            }
+        }
+
+        .EnterpriseButton {
+            width: 7em;
+            height: 2.5em;
+
+            background-color: $sweetblue;
+            color: $black;
+
+            border: none;
+            border-radius: 2px;
+
+            &:hover {
+                cursor: pointer;
+
+                background-color: $blue;
+                color: $white;
+
+                transition: 0.25s;
+            }
+        }
+    }
+}
+
+.Offert {
+    width: 30%;
+    @include flex(column, center, center);
+
+    margin: 2em 0 2.5em 0;
+    padding: 2em 0.5em;
+    gap: 0.75em;
+    border-radius: 0 1em;
+
+    background-color: $bg-boxes;
+
+    .OffertInfo {
+        color: $black;
+        @include titles(1.5rem);
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            color: $white;
+            text-align: center;
+            font-style: italic;
+
+            transition: 0.3s;
+        }
+    }
+
+    .OffertSubInfo {
+        color: $grey;
+        @include titles(1rem);
+        text-align: center;
+
+    }
+    .textoaubicar {
+        @include textos(justify, 0.9em)
+    }
+
+}
+
+

@@ -1,0 +1,32 @@
+@mixin flex ($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin titles($size) {
+    font-size: $size;
+}
+
+@mixin textos($align, $size) {
+    text-align: $align;
+    font-size: $size;
+}
+
+@mixin main {
+        @include flex(column, center, center);
+        gap: 1em;
+}
+
+
+@mixin bg-greyboxes {
+    border-radius: $borderbg;
+    background-color: $bg-boxes;
+    padding: $paddingbg;
+}
+
+@mixin bg-pinkboxes {
+    border-radius: $borderbgpink;
+    background-color: $bg-secondboxes;
+}

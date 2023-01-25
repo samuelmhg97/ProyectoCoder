@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="slide-in-top">
         <div class="Head">
             <p>Hola como estas bienvenido a este humilde proyectito</p>
         </div>
         <nav id="Navbar">
-            <a href="../index.html">
+            <a href="../index.html" class="item1">
                 <img id="NavLogo" src="../assets/img/Logo-de-Joshua-Herrera-Group-HD.png" alt="Logo de Navegacion">
             </a>
-            <ul class ="MenuOptions">
+            <ul class ="MenuOptions item3">
                 <li >
                     <a href="./AcercaDe.html">Acerca De</a>
                 </li>
@@ -30,26 +30,31 @@
                     <a href="./Blog.html">Blog</a>
                 </li>
             </ul>
-            <!-- enlaces internos que sirven para one pages -->
-            <a href="#textoaubicar"></a>
-            <!-- <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol> -->
-            <!-- <dl> -->
-                <!-- listas de definicion -->
-                <!-- <dt>papa</dt>
-                <dd>Un alimento</dd> -->
-            <!-- </dl> -->
+            <input type="checkbox" id="menu">
+            <label for="menu">☰</label>
+            <ul class="MenuOptionsResp">
+                <li >
+                    <a href="./AcercaDe.html">Acerca De</a>
+                </li>
+                <li>
+                    <a href="./ComoFunciona.html">Como Funciona</a>
+                </li>
+                <li>
+                    <a href="./Contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="./Blog.html">Blog</a>
+                </li>
+            </ul>
         </nav>
+        <!-- <nav class="Head-responsive">
+
+        </nav> -->
     </header>
     <main>
         <section class="FirstBody">
             <div class="SecondBodyHIW">
-                <div>
-                    <h1 class="FirstBodyTitle">Como Funciona</h1>
-                </div>
+                <h1 class="FirstBodyTitle">Como Funciona</h1>
                 <p class="textoaubicar">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem nobis eum voluptatibus unde? Laborum nulla odio tenetur excepturi, perspiciatis quam assumenda a non maiores fugit sapiente porro, facere iste. Accusamus!</p>
             </div>
             <div class="HIW-Container">
@@ -89,10 +94,8 @@
             <div class="HIW-Container2">
                 <div class="HIW-ItemContainer2">
                     <h2>Proyéctate y crece en el escenario digital</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem corporis repellendus nulla exercitationem iure perspiciatis ipsum laboriosam error, eum nostrum quia harum, iste officia vel tempore quaerat fugiat id necessitatibus.</p>
-                    <div>
-                        <button>¡Ponerse en Contacto!</button>
-                    </div>
+                    <p class="textoaubicar">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem corporis repellendus nulla exercitationem iure perspiciatis ipsum laboriosam error, eum nostrum quia harum, iste officia vel tempore quaerat fugiat id necessitatibus.</p>
+                    <button class="NomadButton">¡Ponerse en Contacto!</button>
                 </div>
             </div>
         </section>
