@@ -2,18 +2,42 @@
     body {
         background-color: $white;
     }
+    .header {
+        padding: 1em 2em;
+        background-color: white;
 
-    header {
-            height: 60%;
-            
-            .Head {
-                display: none;
+        a {
+        width: 150px;
+        height: 50px;
+        }
+        .navigation {
+            width: 30px;
+            .hamburger, .toggle-menu {
+                display: block;
+                justify-self: flex-end
             }
 
-            #Navbar {
+            .menu {
+                @include flex(column, start, center);
+                position: fixed;
+                top: 0; 
+                right: -300px;
                 background-color: $blue;
-                padding: 0 2em;
+                    width: 200px; 
+                height: 100%;
+                padding-top: 65px;
+
+                li {
+                    width: 100%;
+                    a {
+                        padding: 30px;
+                        font-size: 15px;
+                        box-shadow: 0 1px 0 $sweetwhite inset;
+                        cursor: pointer;
+                    }
+                }
             }
+        }
     }
 
     .FirstBody {
@@ -47,6 +71,19 @@
         }
     }
 
+    .HIW-Container {
+        .HIW-ItemContainer {
+            width: 95%;
+        }
+    }
+
+    .HIW-Container2{
+        align-items: center;
+        .HIW-ItemContainer2 {
+            width: 90%;
+            height: 90%;
+        }
+    }
 
     .FooterBody {
         p {
