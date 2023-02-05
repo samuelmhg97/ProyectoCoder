@@ -96,6 +96,27 @@
         }
     }
 
+    .Contact-BodyContainer {
+        .Contact-InfoContainer {
+            .Contact-InfoItem {
+                gap: 0.5em;
+                .Contact-InfoImage {
+                    width: 50px;
+                    height: 50px;
+                }
+                div {
+                    .ThirdBodyTitle {
+                        @include titles(0.9rem);
+                        text-align: center;
+                    }
+                    .textoaubicar {
+                        @include textos(center, 0.75em)
+                    }
+                }
+            }
+        }
+    }
+
     .FooterBody {
         p {
             padding: 1em;
