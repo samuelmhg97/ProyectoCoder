@@ -398,16 +398,17 @@ main {
         transition: 0.25s; }
 
 .Contact-BodyContainer {
-  width: 80%;
+  width: 90%;
   height: 40rem;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 100%;
   justify-content: center;
   align-items: center;
-  margin: 2em;
-  gap: 5em; }
+  margin: 1em; }
   .Contact-BodyContainer .Contact-InfoContainer {
-    width: 50%;
+    width: 80%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -417,20 +418,23 @@ main {
     padding: 1em;
     gap: 1em; }
     .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      height: 25%;
+      width: 60%;
+      display: grid;
+      grid-template-columns: repeat(3, 30%);
+      grid-template-rows: repeat(4, 25%);
       margin: 0.75em;
-      gap: 1.5em; }
+      gap: 1em; }
       .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem .Contact-InfoImage {
-        width: 3em;
-        height: 3em; }
+        grid-column: 1/2;
+        grid-row: 2/4; }
       .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        grid-column: 2/4;
+        grid-row: 2/4;
         gap: 1em; }
         .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem div .ThirdBodyTitle {
           font-size: 1.2rem;
@@ -439,73 +443,131 @@ main {
           text-align: center;
           font-size: 0.9em; }
   .Contact-BodyContainer .Contact-FormContainer {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 1em;
-    background-color: #ccd7dbab; }
-    .Contact-BodyContainer .Contact-FormContainer .Contact-FormItem {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2em;
-      gap: 1.5em; }
-      .Contact-BodyContainer .Contact-FormContainer .Contact-FormItem .ThirdBodyTitle {
-        font-size: 1.2rem; }
-      .Contact-BodyContainer .Contact-FormContainer .Contact-FormItem .textoaubicar {
-        text-align: justify;
-        font-size: 0.9em; }
-    .Contact-BodyContainer .Contact-FormContainer form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 1em; }
-      .Contact-BodyContainer .Contact-FormContainer form .ContactFormField {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px; }
+    .Contact-BodyContainer .Contact-FormContainer .ThirdBodyTitle {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #ffffff;
+      text-align: center; }
+    .Contact-BodyContainer .Contact-FormContainer .textoaubicar {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #ffffff;
+      text-align: center; }
+    .Contact-BodyContainer .Contact-FormContainer .Contact-form .Inputs {
+      position: relative; }
+      .Contact-BodyContainer .Contact-FormContainer .Contact-form .Inputs input {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 0 2em;
-        gap: 0.5em;
-        border: none; }
-        .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Inputs {
-          width: 15em;
-          height: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          gap: 1em; }
-          .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Inputs span {
-            font-size: 1em; }
-          .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Inputs input {
-            height: 2em;
-            width: 10em;
-            border: none;
-            text-align: center; }
-            .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Inputs input::placeholder {
-              font-size: 0.8em; }
-        .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Comment {
+        padding: 10px 0;
+        font-size: 1rem;
+        color: #ffffff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #ffffff;
+        outline: none;
+        background: transparent; }
+        .Contact-BodyContainer .Contact-FormContainer .Contact-form .Inputs input:focus ~ label {
+          top: -20px;
+          left: 0;
+          color: #78cfda;
+          text-align: justify;
+          font-size: 0.75rem; }
+        .Contact-BodyContainer .Contact-FormContainer .Contact-form .Inputs input:valid ~ label {
+          top: -20px;
+          left: 0;
+          color: #78cfda;
+          text-align: justify;
+          font-size: 0.75rem; }
+      .Contact-BodyContainer .Contact-FormContainer .Contact-form .Inputs label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        text-align: justify;
+        font-size: 1rem;
+        color: #ffffff;
+        pointer-events: none;
+        transition: 0.5s; }
+    .Contact-BodyContainer .Contact-FormContainer .Contact-form a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #78cfda;
+      font-size: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 0.5s; }
+      .Contact-BodyContainer .Contact-FormContainer .Contact-form a:hover {
+        background: #78cfda;
+        color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #78cfda, 0 0 25px #78cfda, 0 0 50px #78cfda, 0 0 100px #78cfda; }
+      .Contact-BodyContainer .Contact-FormContainer .Contact-form a span {
+        position: absolute;
+        display: block; }
+        .Contact-BodyContainer .Contact-FormContainer .Contact-form a span:nth-child(1) {
+          top: 0;
+          left: -100%;
           width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-          gap: 0.5em; }
-          .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Comment span {
-            font-size: 1em; }
-          .Contact-BodyContainer .Contact-FormContainer form .ContactFormField .Comment input {
-            height: 15em;
-            width: 20em;
-            align-self: center;
-            border: none; }
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #03e9f4);
+          animation: btn-anim1 1s linear infinite; }
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%; }
+  50%, 100% {
+    left: 100%; } }
+        .Contact-BodyContainer .Contact-FormContainer .Contact-form a span:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, #03e9f4);
+          animation: btn-anim2 1s linear infinite;
+          animation-delay: .25s; }
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%; }
+  50%, 100% {
+    top: 100%; } }
+        .Contact-BodyContainer .Contact-FormContainer .Contact-form a span:nth-child(3) {
+          bottom: 0;
+          right: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(270deg, transparent, #03e9f4);
+          animation: btn-anim3 1s linear infinite;
+          animation-delay: .5s; }
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%; }
+  50%, 100% {
+    right: 100%; } }
+        .Contact-BodyContainer .Contact-FormContainer .Contact-form a span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #03e9f4);
+          animation: btn-anim4 1s linear infinite;
+          animation-delay: .75s; }
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%; }
+  50%, 100% {
+    bottom: 100%; } }
 
 .Blog-Container {
   display: flex;
@@ -515,7 +577,7 @@ main {
   .Blog-Container .Blog-ArticleContainer {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -523,7 +585,7 @@ main {
     margin-bottom: 10em;
     gap: 1em; }
     .Blog-Container .Blog-ArticleContainer figure {
-      width: 30%;
+      max-width: 60%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -535,18 +597,27 @@ main {
       gap: 0.3em;
       background-color: #2c7b9b50;
       padding: 1em;
-      border-radius: 0 1em; }
+      border-radius: 0 1em;
+      box-shadow: none; }
+      .Blog-Container .Blog-ArticleContainer figure:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        transition: 0.3s; }
       .Blog-Container .Blog-ArticleContainer figure img {
         width: 100%;
         border-radius: 10px; }
       .Blog-Container .Blog-ArticleContainer figure figcaption {
-        font-size: 1rem;
+        font-size: 1.4rem;
         padding: 1em;
         text-align: center;
         font-weight: bold; }
       .Blog-Container .Blog-ArticleContainer figure .textoaubicar {
         text-align: justify;
         font-size: 0.9em; }
+
+.ContactTitle {
+  font-size: 1.5rem;
+  margin-top: 1em; }
 
 footer {
   width: 100%;
@@ -721,6 +792,33 @@ footer {
       .HIW-Container2 .HIW-ItemContainer2 .textoaubicar {
         text-align: justify;
         font-size: 0.8em; }
+  .ContactTitle {
+    font-size: 1.3em; }
+  .Blog-Container .Blog-ArticleContainer figure figcaption {
+    font-size: 1.25rem; }
+  .Contact-BodyContainer {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    width: 70%;
+    height: 80%;
+    gap: 1em; }
+    .Contact-BodyContainer .Contact-InfoContainer {
+      grid-column: 1/3;
+      width: 100%;
+      height: 80%; }
+      .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem {
+        gap: 1em;
+        width: 90%; }
+        .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem div .ThirdBodyTitle {
+          font-size: 1rem; }
+        .Contact-BodyContainer .Contact-InfoContainer .Contact-InfoItem div .textoaubicar {
+          text-align: center;
+          font-size: 0.85em; }
+    .Contact-BodyContainer .Contact-FormContainer {
+      grid-column: 1/3;
+      width: 100%;
+      height: 110%;
+      margin-bottom: 3em; }
   .FooterBody {
     width: 100%;
     height: 100%;
@@ -788,5 +886,8 @@ footer {
     .HIW-Container2 .HIW-ItemContainer2 {
       width: 90%;
       height: 90%; }
+  .Blog-Container .Blog-ArticleContainer figure figcaption {
+    font-size: 1rem;
+    padding: 0.3em; }
   .FooterBody p {
     padding: 1em; } }

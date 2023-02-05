@@ -35,20 +35,19 @@
     </header>
     <main>
         <section class="FirstBody">
-            <div>
-                <h1>Contacto</h1>
-            </div>
+            <div></div>
+            <h1 class="FirstBodyTitle ContactTitle">Contacto</h1>
             <div class="Contact-BodyContainer">
                 <div class="Contact-InfoContainer">
                     <div class="Contact-InfoItem">
-                        <img class="Contact-InfoImage" src="https://cdn-icons-png.flaticon.com/512/854/854952.png" alt="Ubicación">
+                        <img class="Contact-InfoImage" src="../assets/img/Map.png" alt="Ubicación">
                         <div>
                             <h3 class="ThirdBodyTitle">Ubicación</h3>
                             <p class="textoaubicar">Córdoba Capital, Argentina</p>
                         </div>
                     </div>
                     <div class="Contact-InfoItem">
-                        <img class="Contact-InfoImage" src="https://cdn-icons-png.flaticon.com/512/1000/1000889.png" alt="Contacto">
+                        <img class="Contact-InfoImage" src="../assets/img/Phone.png" alt="Contacto">
                         <div>
                             <h3 class="ThirdBodyTitle">Número de Contacto</h3>
                             <p class="textoaubicar">
@@ -59,47 +58,49 @@
                         </div>
                     </div>
                     <div class="Contact-InfoItem">
-                        <img class="Contact-InfoImage" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                        <img class="Contact-InfoImage" src="../assets/img/mail.png" alt="Email">
                         <div>
                             <h3 class="ThirdBodyTitle">Email</h3>
-                            <p class="textoaubicar">samuelmhg97@gmail.com</p>
+                            <a href="mailto:samuelmhg97@gmail.com">
+                                <p class="textoaubicar">samuelmhg97</p>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="Contact-FormContainer">
-                    <div class="Contact-FormItem">
+                    <!-- <div class="Contact-FormItem"> -->
                         <h3 class="ThirdBodyTitle">¿Hablamos?</h3>
                         <p class="textoaubicar">Estaremos atentos a tu contacto</p>
-                    </div>
-                    <form action="" method="post">
-                        <!-- action es para base de datos
-                        method es de get y post, donde el get se muestra
-                        en la barra de navegacion y post no por lo cual es mas segura
-                        -->
-                        <fieldset class="ContactFormField">
-                            <!-- <legend>datos</legend> -->
-                            <label class="Inputs" for="nombre">
-                                <span>Nombre:</span>
-                                <input type="text" id="nombre" placeholder="Ingresa tu nombre">
-                            </label>
-                            <label class="Inputs" for="Apellido">
-                                <span>Apellido:</span>
-                                <input type="text" id="Apellido" placeholder="Ingresa tu Apellidos">
-                            </label>
-                            <label class="Inputs" for="Email">
-                                <span>Email:</span>
-                                <input type="email" id="Email" placeholder="Ingresa tu email" required>
-                            </label>
-                            <label class="Inputs" for="Subject">
-                                <span>Subject:</span>
-                                <input type="text" id="Subject" placeholder="Asunto">
-                            </label>
-                            <label class="Comment" for="Comment">
-                                <span>Comment:</span>
-                                <input type="text" id="Comment" placeholder="Cuentanos un poco mas">
-                            </label>
-                            <!-- span sirve para acomodar en linea -->
-                        </fieldset>
+                    <!-- </div> -->
+                    <form action="" method="post" class="Contact-form">
+
+                            <div class="Inputs" for="nombre">
+                                <input type="text" id="nombre" placeholder="" required>
+                                <label>Nombre</label>
+                            </div>
+                            <div class="Inputs" for="Apellido">
+                                <input type="text" id="Apellido" placeholder="" required>
+                                <label>Apellido</label>
+                            </div>
+                            <div class="Inputs" for="Email">
+                                <input type="email" id="Email" placeholder="" required>
+                                <label>Email</label>
+                            </div>
+                            <div class="Inputs" for="Subject">
+                                <input type="text" id="Subject" placeholder="" required>
+                                <label>Asunto</label>
+                            </div>
+                            <div class="Inputs" for="Comment">
+                                <input type="text" id="Comment" placeholder="" required>
+                                <label>Comment</label>
+                            </div>
+                        <a href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Enviar
+                        </a>
                     </form>
                 </div>
             </div>

@@ -84,6 +84,17 @@
             height: 90%;
         }
     }
+    
+    .Blog-Container {
+        .Blog-ArticleContainer {
+            figure {
+                figcaption {
+                    @include titles(1rem);
+                    padding: 0.3em;
+                }
+            }
+        }
+    }
 
     .FooterBody {
         p {
