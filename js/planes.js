@@ -1,9 +1,37 @@
 let user;
-let password = 0;
 let account = false;
-let logState = false;
 let total = 0;
+const users = [
+    {   
+        id: 1,
+        name: "Samu",
+        password: "Admin",
+        status: "nomada",
+        role: "admin",
+        logState: false,
+        courses: []
+    },
+    {
+        id:2,
+        name: "Balti",
+        password: "SamuelSeMereceUnOptimo",
+        status:"",
+        role: "comprador",
+        logState: false,
+        courses:[]
+    }
+];
 
+const Courses = [
+    {
+        nomadas: {
+
+        },
+        freelancers: {
+            
+        }
+    }
+]
 const anonimo = "anonimo"
 const comprador = "comprador"
 
@@ -31,22 +59,24 @@ const logIn = function(user, password) {
     if(account) {
             let userAttempts = 1
             while(userAttempts <= 3) {
-                user = prompt("Ingrese por favor su usuario (todo en minusculas porfavor)")
-                if(user === comprador) break
+                userIntro = prompt("Ingrese por favor su usuario (todo en minusculas porfavor)")
+                user = users.find((e) => e.name === userIntro)
+                console.log(user)
+                if(user) break
                 else {
                     alert("Usuario incorrecto, ingrese nuevamente su usuario")
                     userAttempts += 1
-                    user = anonimo
                     continue
                 }
             }
-            if(user === comprador) {
+            if(user) {
                 let passwordAttempts = 1
                 while(passwordAttempts <= 3) {
-                    password = parseInt(prompt("Ingrese por favor su clave numérica"))
-                    if(password === 1234) {
-                        alert("Bienvenido/a usuario")
-                        logState = true
+                    passwordIntro = prompt("Ingrese por favor su clave")
+                    if(passwordIntro === user.password) {
+                        alert(`Bienvenido/a ${user.name}`)
+                        user.logState = true
+                        console.log(user)
                         break
                     } else {
                         alert("Clave incorrecta, ingrese nuevamente su clave")
@@ -54,12 +84,11 @@ const logIn = function(user, password) {
                         continue
                     }
                 } 
-                if(logState) {
+                if(user) {
                     console.log(user)
                     alert("Ingreso exitoso, estos son los planes que tenemos para tí")
                 }
                 else {
-                    user = anonimo
                     console.log(user)
                     alert("No pudimos validar su usuario, por lo mismo procederemos a continuar como anonimos y al final del recorrido solicitaremos un mail para comunicarnos con usted")
                 }
@@ -229,6 +258,6 @@ alert("Hola bienvenido a Joshua Herrera Group, antes de mostrarte nuestras propu
 userValidation()
 logIn()
 jobStateValidation()
-purpose()
-totalCart()
+// purpose()
+// totalCart()
 alert("El total de tu carrito querido " + jobState + " es de $" + total)
