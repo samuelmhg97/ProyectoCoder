@@ -1,0 +1,233 @@
+.Login-BodyContainer {
+    width: 90%;
+    height: 40rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1em;
+
+    .Login-InfoContainer {
+        width: 80%;
+        height: 80%;
+        @include flex(column, center, center);
+        background-color: $bg-boxes;
+        border-radius: $borderbg;
+        padding: 1em;
+
+        gap: 1em;
+
+        .Login-InfoItem {
+            height: 25%;
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: repeat(4, 25%);
+            margin: 0.75em;
+            gap: 1em;
+
+            .Login-InfoImage {
+                grid-column: 1/2;
+                grid-row: 2/4;
+            }
+
+            div {
+                @include flex(column, center, center);
+                grid-column: 2/4;
+                grid-row: 2/4;
+                gap: 1em;
+
+                .ThirdBodyTitle {
+                    @include titles(1.2rem);
+                    text-align: center;
+                }
+
+                .textoaubicar {
+                    @include textos(center, 0.9em);
+                }
+            }
+        }
+    }
+
+    .Register-FormContainer {
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        padding: 40px;
+        background: rgba(0,0,0,.8);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+        // margin-left: 5em;
+
+        .ThirdBodyTitle {
+            margin: 0 0 30px;
+            padding: 0;
+            color: $white;
+            text-align: center;
+        }
+        .textoaubicar {
+            margin: 0 0 30px;
+            padding: 0;
+            color: $white;
+            text-align: center;
+        }
+        .Register-form {
+            .Inputs {
+                position: relative;
+    
+                input {
+                    width: 100%;
+                    padding: 10px 0;
+                    @include titles(1rem);
+                    color: $white;
+                    margin-bottom: 30px;
+                    border: none;
+                    border-bottom: 1px solid $white;
+                    outline: none;
+                    background: transparent;
+    
+                    &:focus ~ label {
+                        top: -20px;
+                        left: 0;
+                        color: $sweetblue;
+                        @include textos(justify, 0.75rem)
+                    }
+                    &:valid ~ label {
+                        top: -20px;
+                        left: 0;
+                        color: $sweetblue;
+                        @include textos(justify, 0.75rem)
+                    }
+                }
+    
+                label {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 10px 0;
+                    @include textos(justify, 1rem);
+                    color: $white;
+                    pointer-events: none;
+                    transition: 0.5s;
+                }
+            }
+            select {
+                width: 100%;
+                padding: 10px 0;
+                @include titles(1rem);
+                color: $white;
+                margin-bottom: 30px;
+                border: none;
+                border-bottom: 1px solid $white;
+                outline: none;
+                background: transparent;
+
+                option{
+                    background: transparent;
+                    color: #000000;
+                }
+            }
+            button {
+                background: transparent;
+                border: none;
+                p {
+                    position: relative;
+                    display: inline-block;
+                    padding: 10px 20px;
+                    color: $sweetblue;
+                    @include titles(1rem);
+                    // text-decoration: none;
+                    text-transform: uppercase;
+                    overflow: hidden;
+                    transition: 0.5s;
+    
+                    &:hover {
+                        background: $sweetblue;
+                        color: $white;
+                        border-radius: 5px;
+                        box-shadow: 0 0 5px $sweetblue,
+                        0 0 25px $sweetblue,
+                        0 0 50px $sweetblue,
+                        0 0 100px $sweetblue;
+                    }
+                    span {
+                        position: absolute;
+                        display: block;
+    
+                        &:nth-child(1) {
+                            top: 0;
+                            left: -100%;
+                            width: 100%;
+                            height: 2px;
+                            background: linear-gradient(90deg, transparent, #03e9f4);
+                            animation: btn-anim1 1s linear infinite;
+                        }
+                        @keyframes btn-anim1 {
+                            0% {
+                                left: -100%;
+                            }
+                            50%, 100% {
+                                left:100%;
+                            }
+                        }
+    
+                        &:nth-child(2) {
+                            top: -100%;
+                            right: 0;
+                            width: 2px;
+                            height: 100%;
+                            background: linear-gradient(180deg, transparent, #03e9f4);
+                            animation: btn-anim2 1s linear infinite;
+                            animation-delay: .25s
+                        }
+                        @keyframes btn-anim2 {
+                            0% {
+                                top: -100%;
+                            }
+                            50%,100% {
+                                top: 100%;
+                            }
+                        }
+                        &:nth-child(3) {
+                            bottom: 0;
+                            right: -100%;
+                            width: 100%;
+                            height: 2px;
+                            background: linear-gradient(270deg, transparent, #03e9f4);
+                            animation: btn-anim3 1s linear infinite;
+                            animation-delay: .5s
+                        }
+                        @keyframes btn-anim3 {
+                            0% {
+                                right: -100%;
+                            }
+                            50%,100% {
+                                right: 100%;
+                            }
+                        }
+                        &:nth-child(4) {
+                            bottom: -100%;
+                            left: 0;
+                            width: 2px;
+                            height: 100%;
+                            background: linear-gradient(360deg, transparent, #03e9f4);
+                            animation: btn-anim4 1s linear infinite;
+                            animation-delay: .75s
+                        }
+                        @keyframes btn-anim4 {
+                            0% {
+                                bottom: -100%;
+                            }
+                            50%,100% {
+                                bottom: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

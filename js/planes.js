@@ -6,7 +6,7 @@ const users = [
         id: 1,
         name: "Samu",
         password: "Admin",
-        status: "nomada",
+        status: "Nomada",
         role: "admin",
         logState: false,
         courses: []
@@ -23,27 +23,34 @@ const users = [
 ];
 
 const Courses = [
-    {
-        nomadas: [
         {
             id: 1,
             nombre: "Bases legales y que necesitas para solicitar visa laboral en mas de 20 paises",
             price: 999,
             tutor: "Joshua Herrera",
-            alias: "NOMACOURSED1"
+            type: "nomada"
         },
         {
             id: 2,
             nombre: "Mentorias de como adaptarte en otros, paises que necesitas hacer y que necesitas buscar a la hora de viajar a otro pais",
             price: 1500,
             tutor: "Joshua Herrera",
-            alias: "NOMACOURSED2"
+            type: "nomada"
+        },{
+            id: 3,
+            nombre: "n°1 Bases legales y tributarias que necesitas antes de cobrar tus trabajos en el exterior",
+            price: 999,
+            tutor: "Joshua Herrera",
+            type: "freelancer"
+        }, {
+            id: 4,
+            nombre: "Que necesitas saber y en que plataforma debes de buscar tus proximas ofertas laborales",
+            price: 1500,
+            tutor: "Joshua Herrera",
+            type: "freelancer"
+
         }
-    ]},{
-        freelancers: {
-            
-        }
-    }
+
 ]
 // const anonimo = "anonimo"
 // const comprador = "comprador"
@@ -127,19 +134,18 @@ function purpose() {
     if(user.status === "nomada") {
         alert("Hola querido nomada, selecciona el numero que acompaña al titulo del curso, tranquilo puedes tomar hasta un maximo de 2, sabemos que quieres comprar mas pero pensamos en tu vida social")
         let courseMaxQty = 2;
-        // let findCourses = Courses.find( e => e === user.status)
-        for (findCourse in Courses) {
+        let findCourses = Courses.filter( e => e.type === user.status)
 
-        }
         console.log(findCourses)
-        for (let i = 0 ; i < nomadCourse.length; i++) {
-            if(i == nomadCourse.length - 1) {
-                nomadCoursesOffert += `N${i+1} ${nomadCourse[i].nombre} con un precio de $${nomadCourse[i].price}, en caso de no desear ninguno por el momento selecciona 0`
+        let nomadCoursesOffert=""
+        for (let i = 0 ; i < findCourses.length; i++) {
+            if(i == findCourses.length - 1) {
+                nomadCoursesOffert += `N${i+1} ${findCourses[i].nombre} con un precio de $${findCourses[i].price}, en caso de no desear ninguno por el momento selecciona 0`
             }else {
-                nomadCoursesOffert += `N${i+1} ${nomadCourse[i].nombre} con un precio de $${nomadCourse[i].price}, `
+                nomadCoursesOffert += `N${i+1} ${findCourses[i].nombre} con un precio de $${findCourses[i].price}, `
             }
         }
-        console.log(nomadCourse)
+        console.log(nomadCoursesOffert)
         for (let i = 0; i < courseMaxQty ; i++) {
             let nomadCourse = Courses[0].nomadas[0];
             let nomadCoursesOffert = ""
@@ -203,7 +209,7 @@ function purpose() {
     //     let courseMaxQty = 2;
     //     for (let i = 0; i < courseMaxQty ; i++) {
     //         console.log(course1,course2)
-    //         let course = parseInt(prompt("n°1 Bases legales y tributarias que necesitas antes de cobrar tus trabajos en el exterior costo: $999Ars n°2 Que necesitas saber y en que plataforma debes de buscar tus proximas ofertas laborales costo $1500Ars, en caso de no desear ninguno por el momento selecciona 0"));
+    //         let course = parseInt(prompt());
     //         if(course === 0) {
     //             break
     //         }
