@@ -60,75 +60,75 @@ const Courses = [
 
 let nacionality = "Venezuela"
 
-function userValidation(confirmation)  {
-    confirmation= prompt("Es usted un usuario de Joshua Herrera Group?")
-    if(confirmation ==="si") {
-        account = true
-    } else {
-        console.log(account)
-    }
-}
+// function userValidation(confirmation)  {
+//     confirmation= prompt("Es usted un usuario de Joshua Herrera Group?")
+//     if(confirmation ==="si") {
+//         account = true
+//     } else {
+//         console.log(account)
+//     }
+// }
 
-const logIn = function() {
-    if(account) {
-            let userAttempts = 1
-            while(userAttempts <= 3) {
-                userIntro = prompt("Ingrese por favor su usuario (todo en minusculas porfavor)")
-                user = users.find((e) => e.name === userIntro)
-                console.log(user)
-                if(user) break
-                else {
-                    alert("Usuario incorrecto, ingrese nuevamente su usuario")
-                    userAttempts += 1
-                    continue
-                }
-            }
-            if(user) {
-                let passwordAttempts = 1
-                while(passwordAttempts <= 3) {
-                    passwordIntro = prompt("Ingrese por favor su clave")
-                    if(passwordIntro === user.password) {
-                        alert(`Bienvenido/a ${user.name}`)
-                        user.logState = true
-                        break
-                    } else {
-                        alert("Clave incorrecta, ingrese nuevamente su clave")
-                        passwordAttempts += 1
-                        continue
-                    }
-                } 
-                if(user) {
-                    alert("Ingreso exitoso, estos son los planes que tenemos para tí")
-                    return user
-                }
-                else {
-                    alert("No pudimos validar su usuario, por lo mismo procederemos a continuar como anonimos y al final del recorrido solicitaremos un mail para comunicarnos con usted")
-                }
-            } else {
-                alert("No pudimos validar su usuario, por lo mismo procederemos a continuar como anonimos y al final del recorrido solicitaremos un mail para comunicarnos con usted")
-            }
-    } else {
-        alert("Procederemos a continuar como anonimos y al final del recorrido solicitaremos un mail para comunicarnos con usted")
-    }
-}
+// const logIn = function() {
+//     if(account) {
+//             let userAttempts = 1
+//             while(userAttempts <= 3) {
+//                 userIntro = prompt("Ingrese por favor su usuario (todo en minusculas porfavor)")
+//                 user = users.find((e) => e.name === userIntro)
+//                 console.log(user)
+//                 if(user) break
+//                 else {
+//                     alert("Usuario incorrecto, ingrese nuevamente su usuario")
+//                     userAttempts += 1
+//                     continue
+//                 }
+//             }
+//             if(user) {
+//                 let passwordAttempts = 1
+//                 while(passwordAttempts <= 3) {
+//                     passwordIntro = prompt("Ingrese por favor su clave")
+//                     if(passwordIntro === user.password) {
+//                         alert(`Bienvenido/a ${user.name}`)
+//                         user.logState = true
+//                         break
+//                     } else {
+//                         alert("Clave incorrecta, ingrese nuevamente su clave")
+//                         passwordAttempts += 1
+//                         continue
+//                     }
+//                 } 
+//                 if(user) {
+//                     alert("Ingreso exitoso, estos son los planes que tenemos para tí")
+//                     return user
+//                 }
+//                 else {
+//                     alert("No pudimos validar su usuario, por lo mismo procederemos a continuar como anonimos y al final del recorrido solicitaremos un mail para comunicarnos con usted")
+//                 }
+//             } else {
+//                 alert("No pudimos validar su usuario, por lo mismo procederemos a continuar como anonimos y al final del recorrido solicitaremos un mail para comunicarnos con usted")
+//             }
+//     } else {
+//         alert("Procederemos a continuar como anonimos y al final del recorrido solicitaremos un mail para comunicarnos con usted")
+//     }
+// }
 
-function jobStateValidation() {
-    console.log(user)
-    alert("Hola, en Joshua Herrera Group nos enfocamos en los freelancers y nomadas digitales, ofrecemos paquetes de capacitación y cursos")
-    let jobState = prompt("Cuentanos, que tipo de trabajador eres, nomada o freelancer? en caso de ser ninguno, no te preocupes ofrecemos una guia para capacitarte en ambos.")
-    switch(jobState) {
-        case "nomada": 
-            alert("Genial, nos encantan esos trabajadores independientes que poseen la visión de recorrer el mundo, o viajar como rutina. Estas son las propuestas que tenemos para tí");
-            user.status = jobState
-            break;
-        case "freelancer":
-            alert("Genial, es asombroso ese trabajador autónomo que ofreces sus servicios independientemente del lugar donde cumpla con sus responsabilidades contraídas.Estas son las propuestas que tenemos para tí");
-            user.status = jobState;
-            break
-        default:
-            alert("No pasa nada, Estos son las propuestas que tenemos para tí en las cuales puedes aprender que tipo de trabajador puedes ser")
-    }
-}
+// function jobStateValidation() {
+//     console.log(user)
+//     alert("Hola, en Joshua Herrera Group nos enfocamos en los freelancers y nomadas digitales, ofrecemos paquetes de capacitación y cursos")
+//     let jobState = prompt("Cuentanos, que tipo de trabajador eres, nomada o freelancer? en caso de ser ninguno, no te preocupes ofrecemos una guia para capacitarte en ambos.")
+//     switch(jobState) {
+//         case "nomada": 
+//             alert("Genial, nos encantan esos trabajadores independientes que poseen la visión de recorrer el mundo, o viajar como rutina. Estas son las propuestas que tenemos para tí");
+//             user.status = jobState
+//             break;
+//         case "freelancer":
+//             alert("Genial, es asombroso ese trabajador autónomo que ofreces sus servicios independientemente del lugar donde cumpla con sus responsabilidades contraídas.Estas son las propuestas que tenemos para tí");
+//             user.status = jobState;
+//             break
+//         default:
+//             alert("No pasa nada, Estos son las propuestas que tenemos para tí en las cuales puedes aprender que tipo de trabajador puedes ser")
+//     }
+// }
 
 function purpose() {
     if(user.status === "nomada") {
@@ -283,9 +283,9 @@ function totalCart() {
     }
 }
 alert("Hola bienvenido a Joshua Herrera Group, antes de mostrarte nuestras propuestas queremos saber si eres ya un usuario, a continuacion aparecerá un espacio de verificacion de usuario, en caso de poseer uno")
-userValidation()
-logIn()
-jobStateValidation()
+// userValidation()
+// logIn()
+// jobStateValidation()
 console.log(user)
 purpose()
 // totalCart()

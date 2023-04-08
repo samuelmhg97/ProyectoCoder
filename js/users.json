@@ -1,0 +1,20 @@
+[
+        {   
+        "id": 1,
+        "name": "Samu",
+        "password": "Admin",
+        "status": "Nomada",
+        "role": "admin",
+        "logState": false,
+        "courses": []
+    },
+    {
+        "id":2,
+        "name": "Balti",
+        "password": "SamuelSeMereceUnOptimo",
+        "status":"Freelancer",
+        "role": "comprador",
+        "logState": false,
+        "courses":[]
+    }
+]

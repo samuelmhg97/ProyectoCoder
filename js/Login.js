@@ -1,25 +1,5 @@
-// let users =[]
-let account = false;
-const users = [
-    {   
-        id: 1,
-        name: "Samu",
-        password: "Admin",
-        status: "Nomada",
-        role: "admin",
-        logState: false,
-        courses: []
-    },
-    {
-        id:2,
-        name: "Balti",
-        password: "SamuelSeMereceUnOptimo",
-        status:"",
-        role: "comprador",
-        logState: false,
-        courses:[]
-    }
-];
+let users
+
 
 
 const inputLoginUser = document.getElementById("Login-name")
@@ -55,67 +35,103 @@ class User {
 
 
 
-function createUser(users, registerText) {
+function createUser(array) {
+    if (inputRegisterUser.value && inputRegisterPassword.value && inputRegister2Password.value && inputRegisterStatus.value) { 
     if(inputRegisterPassword.value === inputRegister2Password.value) {
-        let findUser = users.find((e) => e.name === inputRegisterUser.value)
+        let findUser = array.find((e) => e.name === inputRegisterUser.value)
         if (findUser) {
-            registerText.innerHTML= ""
-            let pConfirm = document.createElement("div")
-            pConfirm.innerHTML = (`<p class="textoaubicar">Usuario Existente</p>`) 
-            registerText[0].appendChild(pConfirm)
-            registerText.innerHTML= ""
+            Toast.fire({
+                icon: 'error',
+                title: 'Usuario existente'
+            })
         }  else {
-            console.log("se creo")
             const user = new User(inputRegisterUser.value, inputRegisterPassword.value, inputRegisterStatus.value)
-            users.push(user)
-            user.setId(users)
-            registerText.innerHTML= ""
-            let pConfirm = document.createElement("div")
-            pConfirm.innerHTML = (`<p class="textoaubicar">Usuario Creado con Exito</p>`) 
-            registerText[0].appendChild(pConfirm)
-            registerText.innerHTML= ""
-            window.location.assign("./Planes.html")
+            array.push(user)
+            user.setId(array)
+            Toast.fire({
+                icon: 'success',
+                title: 'Usuario Creado con exito, seras redirigido a nuestra pagina de productos'
+            })
+            // setTimeout(() => {
+            //     window.location.assign("./Planes.html")
+            // }, 4000)
         }
     } else {
-        console.log("verificación invalida")
+        Toast.fire({
+            icon: 'error',
+            title: 'Verifique porfavor la contraseña'
+        })
+    } } else {
+        Toast.fire({
+            icon: 'error',
+            title: 'Porfavor Rellenar los campos    '
+        })
     }
 }
 
-function saveUserStorage(users) {
-    localStorage.setItem("UsersList", JSON.stringify(users))
+function saveUserStorage(array) {
+    localStorage.setItem("UsersList", JSON.stringify(array))
 }
 
 function loginUser(users, loginText) {
-    if(inputLoginUser && inputLoginPassword) {
+    if(inputLoginUser.value && inputLoginPassword.value) {
         let findUser = users.find((e) => e.name === inputRegisterUser.value)
         if (findUser) {
             if (findUser.password === inputLoginPassword.value) {
                 findUser.logStatus = true
-                window.location.assign("./Planes.html")
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Inicio de sesion exitoso, seras redirigido'
+                })
+                setTimeout(() => {
+                    window.location.assign("./Planes.html")
+                }, 4000)
             }  else {
-                loginText.innerHTML= ""
-                let pConfirm = document.createElement("div")
-                pConfirm.innerHTML = (`<p class="textoaubicar">Clave Invalida</p>`) 
-                loginText[0].appendChild(pConfirm)
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Contraseña Invalida'
+                })
             } 
                 
         }  else {
-            loginText.innerHTML= ""
-            let pConfirm = document.createElement("div")
-            pConfirm.innerHTML = (`<p class="textoaubicar">Usuario Invalido</p>`) 
-            loginText[0].appendChild(pConfirm)
+            Toast.fire({
+                icon: 'error',
+                title: 'Usuario Invalido'
+            })
         }
     } else {
-        console.log("verificación invalida")
+        Toast.fire({
+            icon: 'error',
+            title: 'Porfavor Rellenar los campos    '
+        })
     }
 }
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+})
 
-btnRegister.onclick = (e) => {
-    e.preventDefault()
-    createUser(users, confirmRegister);
-    saveUserStorage(users)
+const getUsers = async function() {
+    let response = await fetch("../js/users.json")
+    let users = await response.json()
     console.log(users)
-}
+    createUser(users)
+    // saveUserStorage(users)
+};
+// btnRegister.onclick = (e) => {
+//     e.preventDefault()
+//     createUser(users, confirmRegister);
+//     saveUserStorage(users)
+//     console.log(users)
+// }
+btnRegister.onclick = getUsers
 
 btnLogin.onclick = (e) => {
     e.preventDefault()
