@@ -35,10 +35,10 @@ class User {
 
 
 
-function createUser(array) {
+function createUser(users) {
     if (inputRegisterUser.value && inputRegisterPassword.value && inputRegister2Password.value && inputRegisterStatus.value) { 
     if(inputRegisterPassword.value === inputRegister2Password.value) {
-        let findUser = array.find((e) => e.name === inputRegisterUser.value)
+        let findUser = users.find((e) => e.name === inputRegisterUser.value)
         if (findUser) {
             Toast.fire({
                 icon: 'error',
@@ -46,8 +46,8 @@ function createUser(array) {
             })
         }  else {
             const user = new User(inputRegisterUser.value, inputRegisterPassword.value, inputRegisterStatus.value)
-            array.push(user)
-            user.setId(array)
+            users.push(user)
+            user.setId(users)
             Toast.fire({
                 icon: 'success',
                 title: 'Usuario Creado con exito, seras redirigido a nuestra pagina de productos'
@@ -118,12 +118,13 @@ const Toast = Swal.mixin({
     }
 })
 
-const getUsers = async function() {
+const getUsers = async function(e) {
+    e.preventDefault()
     let response = await fetch("../js/users.json")
     let users = await response.json()
-    console.log(users)
     createUser(users)
-    // saveUserStorage(users)
+    saveUserStorage(users)
+    console.log(users)
 };
 // btnRegister.onclick = (e) => {
 //     e.preventDefault()
