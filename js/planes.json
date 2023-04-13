@@ -1,0 +1,28 @@
+[        
+    {
+            "id": 1,
+            "nombre": "Bases legales y que necesitas para solicitar visa laboral en mas de 20 paises",
+            "price": 999,
+            "tutor": "Joshua Herrera",
+            "type": "nomada"
+        },
+        {
+            "id": 2,
+            "nombre": "Mentorias de como adaptarte en otros, paises que necesitas hacer y que necesitas buscar a la hora de viajar a otro pais",
+            "price": 1500,
+            "tutor": "Joshua Herrera",
+            "type": "nomada"
+        },{
+            "id": 3,
+            "nombre": "n°1 Bases legales y tributarias que necesitas antes de cobrar tus trabajos en el exterior",
+            "price": 999,
+            "tutor": "Joshua Herrera",
+            "type": "freelancer"
+        }, {
+            "id": 4,
+            "nombre": "Que necesitas saber y en que plataforma debes de buscar tus proximas ofertas laborales",
+            "price": 1500,
+            "tutor": "Joshua Herrera",
+            "type": "freelancer"
+        }
+    ]

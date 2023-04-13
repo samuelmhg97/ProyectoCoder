@@ -1,7 +1,7 @@
 [
         {   
         "id": 1,
-        "name": "Samu",
+        "username": "Samu",
         "password": "Admin",
         "status": "Nomada",
         "role": "admin",
@@ -10,7 +10,7 @@
     },
     {
         "id":2,
-        "name": "Balti",
+        "username": "Balti",
         "password": "SamuelSeMereceUnOptimo",
         "status":"Freelancer",
         "role": "comprador",
