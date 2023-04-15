@@ -1,4 +1,7 @@
 let users
+let usersCreate = []
+
+const localStorageTest = JSON.parse(localStorage.getItem("UsersCreated"))
 
 
 
@@ -48,7 +51,16 @@ function createUser(users) {
             const user = new User(inputRegisterUser.value, inputRegisterPassword.value, inputRegisterStatus.value)
             users.push(user)
             user.setId(users)
-            localStorage.setItem("UsersList", JSON.stringify(user))
+
+            if(localStorageTest) {
+                user.id = users.length + localStorageTest.length + 1
+                localStorageTest.push(user)
+                localStorage.setItem("UsersCreated", JSON.stringify(localStorageTest))
+            } else {
+                usersCreate.push(user)
+                localStorage.setItem("UsersCreated", JSON.stringify(usersCreate))
+            }
+
             Toast.fire({
                 icon: 'success',
                 title: 'Usuario Creado con exito, seras redirigido a nuestra pagina de productos'
@@ -71,16 +83,18 @@ function createUser(users) {
 }
 
 function loginUser() {
-    const localStorageUsers = JSON.parse(localStorage.getItem("UsersList"))
+    const localStorageUsers = JSON.parse(localStorage.getItem("UsersCreated"))
     if(inputLoginUser.value && inputLoginPassword.value) {
         let findUser = users.find((e) => e.username === inputLoginUser.value)
         if(findUser) {
             if (findUser.password === inputLoginPassword.value) {
                 findUser.logStatus = true
+                localStorage.setItem("UserOnline", JSON.stringify(findUser))
                 Toast.fire({
                     icon: 'success',
                     title: 'Inicio de sesion exitoso, seras redirigido'
                 })
+
                 setTimeout(() => {
                     window.location.assign("./Planes.html")
                 }, 4000)
@@ -93,18 +107,18 @@ function loginUser() {
         }
         else if(localStorageUsers) {
             users = localStorageUsers
-            let findUser = (localStorageUsers.username === inputLoginUser.value)
+            let findUser = users.find((e) => e.username === inputLoginUser.value)
             if (findUser) {
-                let findPassword = (localStorageUsers.password === inputLoginPassword.value)
-                if (findPassword) {
+                if (findUser.password === inputLoginPassword.value) {
                     localStorageUsers.logStatus = true
+                    localStorage.setItem("UserOnline", JSON.stringify(findUser))
                     Toast.fire({
                         icon: 'success',
                         title: 'Inicio de sesion exitoso, seras redirigido'
                     })
                     setTimeout(() => {
                         window.location.assign("./Planes.html")
-                    }, 4000)
+                    }, 4000)    
                 }  else {
                     Toast.fire({
                         icon: 'error',
@@ -166,18 +180,16 @@ const Toast = Swal.mixin({
 const getUsers = async function(e) {
     let response = await fetch("../js/users.json")
     users = await response.json()
-    console.log(users)
 };
 
 btnRegister.onclick = async (e) => {
     e.preventDefault()
     await getUsers()
     createUser(users, confirmRegister);
-    console.log(users)
 }
 
 btnLogin.onclick = async (e) => {
     e.preventDefault()
-        await getUsers()
+    await getUsers()
     loginUser()
 }

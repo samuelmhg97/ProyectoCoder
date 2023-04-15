@@ -1,28 +1,32 @@
 [        
     {
             "id": 1,
-            "nombre": "Bases legales y que necesitas para solicitar visa laboral en mas de 20 paises",
+            "nombre": "Asesoria Legal para visas Laborales",
             "price": 999,
             "tutor": "Joshua Herrera",
-            "type": "nomada"
+            "type": "nomada",
+            "Imagen": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
         },
         {
             "id": 2,
-            "nombre": "Mentorias de como adaptarte en otros, paises que necesitas hacer y que necesitas buscar a la hora de viajar a otro pais",
+            "nombre": "Puntos a tomar en cuenta a la hora de migrar",
             "price": 1500,
             "tutor": "Joshua Herrera",
-            "type": "nomada"
+            "type": "nomada",
+            "Imagen": "https://images.unsplash.com/photo-1580894908361-967195033215?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         },{
             "id": 3,
-            "nombre": "n°1 Bases legales y tributarias que necesitas antes de cobrar tus trabajos en el exterior",
+            "nombre": "Bases tributarias de sueldos en el exterior",
             "price": 999,
             "tutor": "Joshua Herrera",
-            "type": "freelancer"
+            "type": "freelancer",
+            "Imagen": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         }, {
             "id": 4,
-            "nombre": "Que necesitas saber y en que plataforma debes de buscar tus proximas ofertas laborales",
+            "nombre": "Top plataformas de bolsas laborales",
             "price": 1500,
             "tutor": "Joshua Herrera",
-            "type": "freelancer"
+            "type": "freelancer",
+            "Imagen": "https://images.unsplash.com/photo-1507206130118-b5907f817163?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
         }
     ]

@@ -17,7 +17,8 @@
     <link rel="shortcut icon" href="https://joshuaherreragroup.com/wp-content/uploads/2022/03/cropped-cropped-Favicon-1-32x32.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <script src="../js/planes.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../js/planes.js"></script>
 </head>
 <body>
     <header class="header">
@@ -34,37 +35,15 @@
                 <li><a href="./Contacto.html">Contacto</a></li>
                 <li><a href="./Blog.html">Blog</a></li>
         </div>
+        <button id="btn-LogOut">
+          <span class="button-text">Log Out</span>
+          <div class="fill-container"></div>
+        </button>
     </header>
     <main>
         <section class="FirstBody">
-            <h1 class="FirstBodyTitle">Nuestros Planes</h1>
-            <!-- <div class="wrapper">
-                <div class="container">
-                  <div class="top"></div>
-                  <div class="bottom">
-                    <div class="left">
-                      <div class="details">
-                        <h1 class="details-Title"></h1>
-                        <p class="details-Price"></p>
-                      </div>
-                      <div class="buy"><i class="material-icons">add_shopping_cart</i></div>
-                    </div>
-                    <div class="right">
-                      <div class="done"><i class="material-icons">done</i></div>
-                      <div class="details">
-                        <h1 class="details-Title"></h1>
-                        <p>Añadido al carrito</p>
-                      </div>
-                      <div class="remove"><i class="material-icons">clear</i></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="inside">
-                  <div class="icon"><i class="material-icons">info_outline</i></div>
-                  <div class="contents">
-                  </div>
-                </div>
-              </div> -->
+            <h1 class="FirstBodyTitle"></h1>
+            <div class="cards-Container"></div>
         </section>
     </main>
     <footer>
@@ -73,6 +52,6 @@
         </div>
     </footer>
 
-
+    
 </body>
 </html>

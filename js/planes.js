@@ -1,5 +1,189 @@
+let products
+let shoppingCart = []
 
-const
+const planesTitle = document.getElementsByClassName("FirstBodyTitle")
+const planesCard= document.getElementsByClassName("cards-Container")
+
+
+
+const btnRegister = document.getElementById("btn-LogOut") 
+
+function userLogOut() {
+    Swal.fire({
+        title: "Estas seguro que deseas cerrar sesión?",
+        text: "volveras a la pagina de Log In y deberas iniciar sesión nuevamente",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si'
+      }).then((result) => {
+        if (result.isConfirmed) {
+        setTimeout(() => {
+            localStorage.removeItem("UserOnline")
+            window.location.assign("./Login.html")
+        }, 4000)
+        }
+      })
+}
+
+function showName(userOnline) {
+    if(userOnline) {
+        planesTitle[0].innerHTML = `Bienvenido ${userOnline.username}, estos son los planes que tenemos para ti`
+    } else {
+        planesTitle[0].innerHTML = "Bienvenido, estos son los planes que tenemos para ti"
+    }
+}
+
+const getProducts = async function(e) {
+    let response = await fetch("../js/planes.json")
+    products = await response.json()
+};
+
+const createProduct = async function(userOnline) {
+    await getProducts()
+    console.log(products)
+    let productsFiltered = products.filter( e => userOnline && e.type === userOnline.status)
+    if(productsFiltered)  {
+        console.log(productsFiltered)
+        planesCard[0].innerHTML = ""
+        // let indice = 0
+        productsFiltered.map((e) => {
+            let productCard = `
+            <div class="wrapper">
+                <div class="container">
+                    <div class="top"></div>
+                    <div class="bottom">
+                    <div class="left">
+                <div class="details">
+                    <h4>${e.nombre}</h4>
+                    <p>${e.price}</p>
+                </div>
+                <div class="buy"><i class="material-icons addToCart" data-id=${e.id}>add_shopping_cart</i></div>
+                </div>
+                <div class="right">
+                    <div class="done"><i class="material-icons">done</i></div>
+                    <div class="details">
+                    <p>${e.nombre}</p>
+                    <p>Añadido al carrito</p>
+                    </div>
+                    <div class="remove"><i class="material-icons">clear</i></div>
+                </div>
+                </div>
+            </div>
+            <div class="inside">
+                <div class="icon"><i class="material-icons">info_outline</i></div>
+                <div class="contents">
+                </div>
+            </div>
+            </div>
+            `
+            for (let i = 0; i < planesCard.length; i++) {
+                planesCard[i].innerHTML += productCard;
+            }
+            const cardBackgrounds = document.querySelectorAll('.top');
+            cardBackgrounds.forEach((cardBackground, index) => {
+                cardBackground.style.background = `url(${productsFiltered[index].Imagen}) no-repeat center center`;
+            });
+
+            const addToCart = document.querySelectorAll("i.addToCart")
+            addToCart.forEach(icon => {
+                // icon.addEventListener("click", () => {
+                //     shoppingCart.push(icon.id)
+                //     console.log(shoppingCart)
+                // })
+                icon.onclick = () => {
+                    if(icon.dataset.id) {
+                        shoppingCart.push(icon.dataset.id);
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Producto añadido al carrito de compras'
+                        })
+
+                    }
+                }
+            
+            })
+            // const btnAddToCart = document.querySelectorAll(".buy")[indice];
+            // const bottomClass = document.querySelectorAll(".bottom")[indice];
+            // const removeAddToCart = document.querySelectorAll(".remove")[indice];
+            // btnAddToCart.onclick = () => {
+            //     bottomClass.classList.add("clicked");
+            // }
+            // removeAddToCart.onclick = () => {
+            //     bottomClass.classList.remove("clicked");
+            // }
+            // indice++
+        })
+    }
+}
+
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+})
+const userOnline = JSON.parse(localStorage.getItem("UserOnline"))
+showName(userOnline)
+createProduct(userOnline)
+
+
+btnRegister.addEventListener("click", userLogOut)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function purpose() {
